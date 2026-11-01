@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lovely Serif — ラブリーセリフ プレビュー</title>
+<meta name="description" content="Lovely Serif（ラブリーセリフ）— 日本語と英語のためのやわらかな明朝体。自由に文字を入力して確認できるプレビュー。">
+<link rel="preload" href="../fonts/LovelySerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Lovely Serif";src:url("../fonts/LovelySerif-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+:root{--paper:#f5f2ec;--paper2:#ebe6dd;--ink:#2a2622;--ink2:#6b645c;--line:#d8d1c6;--accent:#8a6a4f;--card:#fbf9f5;--shadow:0 10px 40px rgba(60,40,20,.08)}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1b1917;--paper2:#232019;--ink:#efe9df;--ink2:#a79e92;--line:#3a352f;--accent:#d2b48c;--card:#242120;--shadow:0 10px 40px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--paper:#1b1917;--paper2:#232019;--ink:#efe9df;--ink2:#a79e92;--line:#3a352f;--accent:#d2b48c;--card:#242120;--shadow:0 10px 40px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Lovely Serif","Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;font-feature-settings:"palt" 0;line-height:1.8}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 24px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--ink2)}
+h1{font-weight:400;font-size:clamp(44px,9vw,112px);line-height:1.05;margin:.1em 0 0;letter-spacing:-.01em}
+h1 small{display:block;font-size:.22em;letter-spacing:.45em;color:var(--ink2);margin-top:.5em}
+.tag{font-size:clamp(28px,5.4vw,60px);line-height:1.3;margin:.5em 0 .3em}
+.lead{font-size:18px;color:var(--ink2);max-width:40em;margin:0}
+.lead.en{font-size:16px;letter-spacing:.02em}
+nav{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);z-index:5}
+nav a{color:var(--ink2);text-decoration:none}nav a:hover{color:var(--accent)}
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+h2{font-weight:400;font-size:28px;margin:0 0 6px}
+h2 + .sub{color:var(--ink2);margin:0 0 22px;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+/* tester */
+.tester{display:grid;grid-template-columns:1fr;gap:18px}
+.controls{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;padding:14px 16px}
+.controls label{display:flex;align-items:center;gap:8px;color:var(--ink2)}
+.controls input[type=range]{width:120px;accent-color:var(--accent)}
+.controls .val{min-width:4.5em;color:var(--ink);font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:12px ui-sans-serif,system-ui,sans-serif;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#sheet{min-height:260px;padding:28px 30px;outline:none;white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere;font-size:40px;line-height:1.7;letter-spacing:0;border-radius:14px}
+#sheet.vert{writing-mode:vertical-rl;height:560px;min-height:0;overflow-x:auto;overflow-y:hidden}
+#sheet.cmp{font-family:"Noto Serif JP",serif}
+#sheet:focus{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 35%,transparent)}
+/* specimens */
+.grid2{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:820px){.grid2{grid-template-columns:1fr 1fr}}
+.spec{padding:26px 28px}
+.spec p{margin:0 0 .9em}
+.big{font-size:34px;line-height:1.45;margin:0 0 .4em}
+.vbox{writing-mode:vertical-rl;height:420px;font-size:20px;line-height:2.1;padding:22px 26px}
+.vbox p{margin:0 0 0 1.2em}
+.en{letter-spacing:.005em}
+.sizes p{margin:.2em 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chars{font-size:30px;line-height:1.75;letter-spacing:.06em;word-break:break-all;padding:20px 24px}
+.chars.small{font-size:22px}
+.wall{font-size:19px;line-height:1.8;letter-spacing:.08em;word-break:break-all;padding:20px 24px;color:var(--ink)}
+.weights{display:flex;flex-wrap:wrap;gap:24px;align-items:baseline;padding:18px 24px}
+.weights div{text-align:center}.weights .ei{font-size:72px;line-height:1}.weights .lab{font:12px ui-sans-serif,system-ui,sans-serif;color:var(--ink2);margin-top:6px}
+.weights .todo .ei{opacity:.28}
+.cmpgrid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:820px){.cmpgrid{grid-template-columns:1fr 1fr}}
+figure{margin:0;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+figure img{width:100%;height:auto;display:block;border-radius:8px;background:#fff}
+figcaption{font:12px/1.5 ui-sans-serif,system-ui,sans-serif;color:var(--ink2);margin-top:8px}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ab > div{padding:18px 20px}
+.ab .lab{font:11px ui-sans-serif,system-ui,sans-serif;letter-spacing:.2em;color:var(--ink2);margin-bottom:8px}
+.ab .t{font-size:30px;line-height:1.5}
+.noto{font-family:"Noto Serif JP",serif}
+table{border-collapse:collapse;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;width:100%}
+td,th{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--ink2);font-weight:500;white-space:nowrap}
+pre{font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--paper2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;color:var(--ink)}
+.note{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--ink2)}
+footer{padding:36px 0 60px;color:var(--ink2);font-size:13px;font-family:ui-sans-serif,system-ui,sans-serif}
+ul.issues{margin:0;padding-left:1.2em;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;line-height:1.7}
+.btn{font:13px ui-sans-serif,system-ui,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="eyebrow">Typeface preview · v0.1.0 · Regular</div>
+  <h1>Lovely Serif<small>ラブリーセリフ</small></h1>
+  <p class="tag">文字から、美しさを。</p>
+  <p class="lead">日常の文章を、もっと美しく、やさしく。静かで、上品で、読むほどに心地よい新しい明朝体です。</p>
+  <p class="lead en">A refined serif typeface for a more beautiful world. Designed for Japanese, with harmony in English.</p>
+</header>
+<nav class="wrap">
+  <a href="#tester">タイプテスター</a><a href="#specimen">見本</a><a href="#vertical">縦書き</a><a href="#chars">文字一覧</a><a href="#compare">Before / After</a><a href="#use">使い方（CSS）</a><a href="#status">状態・課題</a>
+  <a href="#" id="theme" style="margin-left:auto">◐ テーマ</a>
+</nav>
+
+<section id="tester" class="wrap">
+  <h2>タイプテスター</h2>
+  <p class="sub">下の枠に自由に入力してください。すべて実際の Lovely Serif（woff2）で表示されます。</p>
+  <div class="tester">
+    <div class="card controls">
+      <label>サイズ <input type="range" id="size" min="11" max="180" value="40"><span class="val" id="sizeval">40px</span></label>
+      <label>行間 <input type="range" id="lh" min="100" max="260" value="170"><span class="val" id="lhval">1.70</span></label>
+      <label>字間 <input type="range" id="ls" min="-5" max="40" value="0"><span class="val" id="lsval">0.00em</span></label>
+      <span class="chips">
+        <button class="chip" data-toggle="vert" aria-pressed="false">縦書き</button>
+        <button class="chip" data-feat="palt" aria-pressed="false">palt（詰め）</button>
+        <button class="chip" data-feat="kern" aria-pressed="true">kern</button>
+        <button class="chip" data-toggle="cmp" aria-pressed="false">Noto Serif JP と比較</button>
+      </span>
+      <span class="chips" style="width:100%">
+        <button class="chip" data-sample="jp">日本語</button>
+        <button class="chip" data-sample="en">English</button>
+        <button class="chip" data-sample="mix">混植</button>
+        <button class="chip" data-sample="kana">かな</button>
+        <button class="chip" data-sample="kanji">常用漢字</button>
+        <button class="chip" data-sample="num">数字・記号</button>
+        <button class="chip" data-sample="site">サイト見出し風</button>
+      </span>
+    </div>
+    <div id="sheet" class="card" contenteditable="true" spellcheck="false">ことばが、日常をやさしくする。
+Lovely Serif は、やわらかな明朝体。
+Beauty in every letter.</div>
+  </div>
+</section>
+
+<section id="specimen" class="wrap">
+  <h2>見本</h2>
+  <p class="sub">本文・見出し・英文、それぞれの表情。</p>
+  <div class="grid2">
+    <div class="card spec">
+      <p class="big">やさしく、上品に、美しく。</p>
+      <p>静かで、強くて、やさしい。日常の文章から、特別な場面まで、すべての文字に美しさを。</p>
+      <p>季節の移ろいの中で、言葉はそっと息をする。光と影が織りなす情景に、心は静かにほどけていく。美しい文字は、美しい時間をつくる。</p>
+      <p>「永」「美」「文」などの線の終端を美しく、ウロコ（三角形のとめ）には丸みを。「あ」「の」「り」「は」は、筆の抜けのような柔らかな曲線に。</p>
+    </div>
+    <div class="card spec en">
+      <p class="big">Beauty in every letter.</p>
+      <p>A quiet, timeless serif. Designed for clarity, harmony, and a more beautiful everyday. The Latin keeps the elegant proportions of Nanum Myeongjo, with slightly rounded serifs and a delicate upward sweep at the exit of m, n, i, l and k.</p>
+      <p>Mixed text — 日本語と English を混ぜても、高さと線の強弱が揃うように調整しています。2026年11月、Lovely Serif v0.1.0。</p>
+      <p style="font-size:14px;color:var(--ink2)">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 &amp; ? ! , . ; : ‘ ’ “ ” ( ) [ ] @ # % $ € ¥</p>
+    </div>
+  </div>
+  <div class="card spec sizes" style="margin-top:22px">
+    <p style="font-size:12px">12px 日常の文章を、もっと美しく、やさしく。A refined serif typeface for a more beautiful world.</p>
+    <p style="font-size:14px">14px 日常の文章を、もっと美しく、やさしく。A refined serif typeface for a more beautiful world.</p>
+    <p style="font-size:16px">16px 日常の文章を、もっと美しく、やさしく。A refined serif typeface for a more beautiful world.</p>
+    <p style="font-size:20px">20px 日常の文章を、もっと美しく、やさしく。A refined serif typeface for a more beautiful world.</p>
+    <p style="font-size:28px">28px 日常の文章を、もっと美しく、やさしく。A refined serif typeface.</p>
+    <p style="font-size:40px">40px 文字から、美しさを。Lovely Serif</p>
+    <p style="font-size:64px">64px 永美文あのりは</p>
+  </div>
+</section>
+
+<section id="vertical" class="wrap">
+  <h2>縦書き</h2>
+  <p class="sub">vert / vrt2 / vpal フィーチャー対応。句読点・括弧・長音は縦組み用の字形に置き換わります。</p>
+  <div class="grid2">
+    <div class="card vbox">
+      <p>ことばが、日常をやさしくする。</p>
+      <p>「美しい文字は、美しい時間をつくる。」——季節の移ろいの中で、言葉はそっと息をする…。</p>
+      <p>二〇二六年十一月　Lovely Serif（ラブリーセリフ）</p>
+    </div>
+    <div class="card vbox" style="font-feature-settings:'vpal' 1">
+      <p>縦書き（vpal・詰め組み）</p>
+      <p>『文字から、美しさを。』光と影が織りなす情景に、心は静かにほどけていく。</p>
+      <p>日常に、美しい文字を。</p>
+    </div>
+  </div>
+</section>
+
+<section id="chars" class="wrap">
+  <h2>文字一覧</h2>
+  <p class="sub">10,364 グリフ · 10,117 文字 · JIS X 0208 漢字 6,356/6,356 · JIS X 0213 第1面漢字（常用・人名用をすべて含む）7,615/7,615</p>
+  <div class="card chars">ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ</div>
+  <div class="card chars" style="margin-top:14px">ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺ</div>
+  <div class="card chars small" style="margin-top:14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 ÀÁÂÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜß àáâäåæçèéêëìíîïñòóôõöøùúûüÿ<br>！？、。・「」『』【】〈〉《》〔〕（）［］｛｝〒〓※〜…―‐ ー 々〆〇 ゛゜ ①②③④⑤⑥⑦⑧⑨⑩ ⅠⅡⅢ ㈱ ℃ ← → ↑ ↓ ○●◎□■△▲▽▼◇◆☆★ ♪ ♭ ♯ ¥ € ＡＢＣ ａｂｃ １２３ ｱｲｳｴｵ</div>
+  <div class="card wall" style="margin-top:14px">一与中乎乾五亦仇仝企伯位佳侠促俵借偏傑働儒兇入典冠凋凶刈制剖劃劫動勺匝千単却厩双叢台合向吾味品唐善喬嘱嚢固地垂埴堕塁塩墳壮夙失套妃妹姥娘婿嬬季完宜害密審射尚尿属岨峯嵩工巻帥幌幻序庭廟弄弛弾彰後徳忘怜恐恰悩惜愉慕憂懇或所扱抗抽拝持挺捨排掩揖搭撒撹攻散斌斥旅早昏是景暢曲月期朽束松枠柑査校桂桟梨棒植楕楽様権機欝歌歯殴比氾江沓治波洞浅浸淀混減湖源滑演潔激瀦災烹煙熱爪牒牲狐狽獄玩球瑛瓦用界略疏痕癖皮監看睦矩砧硲碩礼神禍私称種穎突窺競符筒箪篤粁粛糟紋素紺給維総練繁纏羅習者聞肌肯胞脇腔膚臥舎舵艶芳苛茎荘菓萌葡蒔蓑蔵蕪薮蘭蚊蛭蝕衆衰裁裸西覧訊許評話誘誼諦謄譜豊財貴賄賠赦足蹄軒輩辛迂迭逐逢遅遜遷邪郷酔醐里釦鉦銭錆録鎖鐸閑阜陛陶随隼雛雷青鞍頁頓題風飾香駈騰魁鮫鰐鳩鴬鷹麺鼓</div>
+  <p class="note" style="margin-top:10px">上の漢字は JIS 第1水準からの抜粋（9字おき）。全収録文字は reports/coverage.md を参照。</p>
+  <h2 style="margin-top:36px">ウェイト</h2>
+  <p class="sub">v0.1 は Regular のみ。Light / Medium / SemiBold / Bold は設計中（単純な太さ変更では完成扱いにしません）。</p>
+  <div class="card weights">
+    <div class="todo"><div class="ei">永</div><div class="lab">Light（予定）</div></div>
+    <div><div class="ei">永</div><div class="lab">Regular ✓</div></div>
+    <div class="todo"><div class="ei">永</div><div class="lab">Medium（予定）</div></div>
+    <div class="todo"><div class="ei">永</div><div class="lab">SemiBold（予定）</div></div>
+    <div class="todo"><div class="ei">永</div><div class="lab">Bold（予定）</div></div>
+  </div>
+</section>
+
+<section id="compare" class="wrap">
+  <h2>Before / After</h2>
+  <p class="sub">左＝元フォント（Noto Serif JP / Nanum Myeongjo）、中＝Lovely Serif、右＝重ね合わせ（赤点線＝元、青点＝新しく追加した丸めの節点）。</p>
+  <div class="card ab" style="margin-bottom:18px">
+    <div><div class="lab">NOTO SERIF JP（Google Fonts から読込）</div><div class="t noto">永美文字 あのりは 文字から、美しさを。</div><div class="t noto en">Beauty in every letter. mnag</div></div>
+    <div><div class="lab">LOVELY SERIF</div><div class="t">永美文字 あのりは 文字から、美しさを。</div><div class="t en">Beauty in every letter. mnag</div></div>
+  </div>
+  <div class="cmpgrid">
+    <figure><img src="../reports/compare/uni6C38.svg" alt="永 before/after"><figcaption>永 — 左右のハライを伸ばしテーパー、はね・ウロコの丸み（手作業編集＋コーナー丸め）</figcaption></figure>
+    <figure><img src="../reports/compare/uni7F8E.svg" alt="美 before/after"><figcaption>美 — ハライの伸長、横画の終端（ウロコ）を丸く</figcaption></figure>
+    <figure><img src="../reports/compare/uni6587.svg" alt="文 before/after"><figcaption>文 — 点を筆の形に近く、ハライの先端を柔らかく</figcaption></figure>
+    <figure><img src="../reports/compare/uni3042.svg" alt="あ before/after"><figcaption>あ — 接線を滑らかに、終筆を伸ばす</figcaption></figure>
+    <figure><img src="../reports/compare/uni306E.svg" alt="の before/after"><figcaption>の — 終筆の切り口を抜きの形に</figcaption></figure>
+    <figure><img src="../reports/compare/uni308A.svg" alt="り before/after"><figcaption>り — 終筆を伸ばして細く</figcaption></figure>
+    <figure><img src="../reports/compare/uni306F.svg" alt="は before/after"><figcaption>は — 結びの出口を少し長く</figcaption></figure>
+    <figure><img src="../reports/compare/m.svg" alt="m before/after"><figcaption>m — 右足のセリフに繊細な払い、全体を +3 unit 太らせて日本語と黒さを統一、セリフの角を丸く</figcaption></figure>
+    <figure><img src="../reports/compare/n.svg" alt="n before/after"><figcaption>n — 同上</figcaption></figure>
+    <figure><img src="../reports/compare/a.svg" alt="a before/after"><figcaption>a — 角の丸め＋太さ調整（払い編集は対象外）</figcaption></figure>
+  </div>
+</section>
+
+<section id="use" class="wrap">
+  <h2>使い方（CSS）</h2>
+  <p class="sub">サイト全体のフォントを Lovely Serif に置き換えるには、woff2 を配置してこれを追加するだけです。</p>
+<pre>@font-face {
+  font-family: "Lovely Serif";
+  src: url("/fonts/LovelySerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html, body { font-family: "Lovely Serif", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+/* 縦書き */  .tate { writing-mode: vertical-rl; }
+/* 詰め組み */ .palt { font-feature-settings: "palt" 1; }</pre>
+  <p class="note">macOS では <code>LovelySerif-Regular.otf</code>（または .ttf）をダブルクリック → Font Book で「インストール」。ファミリー名は「Lovely Serif」（日本語環境では「ラブリーセリフ」）として表示されます。</p>
+</section>
+
+<section id="status" class="wrap">
+  <h2>状態・残る課題（v0.1.0）</h2>
+  <ul class="issues">
+    <li>Regular 1ウェイトのみ。Light / Medium / SemiBold / Bold は、Noto Serif JP の可変軸と Nanum Myeongjo Bold を元に設計予定。</li>
+    <li>アクセント付きラテン文字（À É ñ など）は Nanum Myeongjo に無いため Noto Serif JP 由来（やや太め）。</li>
+    <li>ヒンティング無し（macOS / iOS / Chrome / Safari は問題なし。Windows の小さいサイズでは輪郭が粗く見えることがあります）。</li>
+    <li>ラテンのカーニングは Nanum Myeongjo の 55 ペアのみ。追加調整の余地あり。</li>
+    <li>手作業で字形を編集したのは代表的な文字（永 美 文 字 あ の り は か す / m n i l k ほか）。その他の文字はアルゴリズム（角の丸め・接線の平滑化・太さ補正）による自動調整です。</li>
+  </ul>
+</section>
+
+<footer class="wrap">
+  Lovely Serif — SIL Open Font License 1.1. Latin after Nanum Myeongjo © 2010 NHN Corporation (OFL). Japanese after Noto Serif JP © 2017–2024 Adobe (OFL). 本ページのフォント表示はすべて実ファイル（woff2）によるものです。
+</footer>
+
+<script>
+const SAMPLES = {
+ jp: "季節の移ろいの中で、言葉はそっと息をする。\n光と影が織りなす情景に、心は静かにほどけていく。\n美しい文字は、美しい時間をつくる。",
+ en: "Beauty in every letter.\nA quiet, timeless serif, designed for clarity, harmony, and a more beautiful everyday.\nThe quick brown fox jumps over the lazy dog. 0123456789",
+ mix: "2026年11月、Lovely Serif v0.1.0 を公開。\nTokyo（東京）から Kyoto（京都）へ、Shinkansen で 2 時間 15 分。\n「Typeface Concept — ことばが、日常をやさしくする。」",
+ kana: "あいうえお かきくけこ さしすせそ たちつてと なにぬねの\nはひふへほ まみむめも やゆよ らりるれろ わをん\nアイウエオ カキクケコ サシスセソ タチツテト ナニヌネノ\nハヒフヘホ マミムメモ ヤユヨ ラリルレロ ワヲン",
+ kanji: "永美文字 愛国春夏秋冬 憂鬱薔薇檸檬 𠮟剝頰塡\n一二三四五六七八九十百千万億 日月火水木金土\n東京都渋谷区神宮前 新幹線 自由 平和 希望 感謝",
+ num: "0123456789 ０１２３４５６７８９\n¥1,980 $24.99 €15 12:30 2026/11/01 50% #1 @home\n！？、。・「」『』【】〈〉（）［］〒※〜…―ー ①②③ ← → ○●◎□■☆★",
+ site: "ラブリーセリフ\nSTUDIO & GALLERY\nやさしく、上品に、美しく。\nWorks  Journal  About  Contact"
+};
+const sheet = document.getElementById('sheet');
+const size = document.getElementById('size'), lh = document.getElementById('lh'), ls = document.getElementById('ls');
+const feats = { palt: false, kern: true };
+function apply() {
+  sheet.style.fontSize = size.value + 'px'; document.getElementById('sizeval').textContent = size.value + 'px';
+  sheet.style.lineHeight = (lh.value / 100).toFixed(2); document.getElementById('lhval').textContent = (lh.value / 100).toFixed(2);
+  sheet.style.letterSpacing = (ls.value / 100).toFixed(2) + 'em'; document.getElementById('lsval').textContent = (ls.value / 100).toFixed(2) + 'em';
+  sheet.style.fontFeatureSettings = Object.entries(feats).map(([k, v]) => `"${k}" ${v ? 1 : 0}`).join(', ');
+}
+[size, lh, ls].forEach(el => el.addEventListener('input', apply));
+document.querySelectorAll('[data-feat]').forEach(b => b.addEventListener('click', () => {
+  feats[b.dataset.feat] = !feats[b.dataset.feat]; b.setAttribute('aria-pressed', feats[b.dataset.feat]); apply();
+}));
+document.querySelectorAll('[data-toggle]').forEach(b => b.addEventListener('click', () => {
+  const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on);
+  sheet.classList.toggle(b.dataset.toggle, on);
+}));
+document.querySelectorAll('[data-sample]').forEach(b => b.addEventListener('click', () => { sheet.textContent = SAMPLES[b.dataset.sample]; }));
+document.getElementById('theme').addEventListener('click', e => {
+  e.preventDefault();
+  const cur = document.documentElement.getAttribute('data-theme');
+  const dark = cur ? cur === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+});
+apply();
+document.fonts.load('40px "Lovely Serif"').then(() => { document.body.dataset.fontLoaded = '1'; });
+</script>
+</body>
+</html>

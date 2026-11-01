@@ -1,0 +1,17 @@
+/* Lovely Serif — web font rules. Put the woff2 files next to this CSS (or adjust the paths). */
+@font-face {
+  font-family: "Lovely Serif";
+  src: url("LovelySerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Lighter option: load only the standard subset (Latin, kana, punctuation, JIS level-1 kanji) */
+@font-face {
+  font-family: "Lovely Serif Std";
+  src: url("LovelySerif-Regular-std.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html { font-family: "Lovely Serif", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; }

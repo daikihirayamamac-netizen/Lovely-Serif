@@ -1,0 +1,10 @@
+fonttools[woff,unicode,lxml]>=4.56
+brotli
+zopfli
+skia-pathops
+ufoLib2
+pillow
+uharfbuzz
+opentype-sanitizer
+fontbakery
+numpy
