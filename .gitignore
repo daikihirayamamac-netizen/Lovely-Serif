@@ -1,0 +1,9 @@
+# upstream fonts are fetched by scripts/build.py --fetch (checksums in lovelyserif/sources.py)
+sources/upstream/
+# the UFO master is exported by the build; the zipped copy is committed instead
+sources/LovelySerif-Regular.ufo/
+fonts/.build/
+__pycache__/
+*.pyc
+/tmp/
+.DS_Store

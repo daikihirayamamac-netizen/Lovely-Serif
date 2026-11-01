@@ -1,0 +1,44 @@
+{
+ "by_category": {
+  "other": 68,
+  "latin": 139,
+  "latin-noto": 244,
+  "symbol": 1341,
+  "box": 160,
+  "kanji": 7717,
+  "punct": 137,
+  "latin-fw": 94,
+  "kana": 464
+ },
+ "modified_by_category": {
+  "latin": 138,
+  "latin-noto": 227,
+  "kanji": 7716,
+  "punct": 117,
+  "latin-fw": 94,
+  "kana": 459
+ },
+ "hand_edited": [
+  "i",
+  "k",
+  "l",
+  "m",
+  "n",
+  "uni3042",
+  "uni304B",
+  "uni3059",
+  "uni306E",
+  "uni306F",
+  "uni308A",
+  "uni5B57",
+  "uni6587",
+  "uni6C38",
+  "uni7F8E",
+  "uniFF49",
+  "uniFF4B",
+  "uniFF4C",
+  "uniFF4D",
+  "uniFF4E"
+ ],
+ "total": 10364
+}
