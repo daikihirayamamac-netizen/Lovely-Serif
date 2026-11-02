@@ -125,6 +125,8 @@ def target_set() -> Set[int]:
     s -= set(range(0x0370, 0x0500))
     s -= set(range(0x0180, 0x0250))   # Latin Extended-B (pinyin letters in JIS X 0213) — no case pairs available
     s -= {0x0000}
+    from .config import EXCLUDE_CODEPOINTS
+    s -= EXCLUDE_CODEPOINTS
     return s
 
 

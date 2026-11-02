@@ -45,8 +45,8 @@ def write_reports(m, status: Dict[str, dict], report_dir: str) -> None:
         f"| set | present | total |", "|---|---|---|",
         f"| ASCII (U+0020–007E) | {sum(1 for c in range(0x20,0x7F) if c in cmap)} | 95 |",
         f"| Latin-1 Supplement | {sum(1 for c in range(0xA0,0x100) if c in cmap)} | 96 |",
-        f"| Hiragana (U+3041–3096, 3099–309F) | {sum(1 for c in list(range(0x3041,0x3097))+list(range(0x3099,0x30A0)) if c in cmap)} | 93 |",
-        f"| Katakana (U+30A0–30FF) | {sum(1 for c in range(0x30A0,0x3100) if c in cmap)} | 96 |",
+        f"| Hiragana (U+3041–3096, 3099–309F) | {sum(1 for c in list(range(0x3041,0x3097))+list(range(0x3099,0x30A0)) if c in cmap)} | 93 (ゑ excluded on purpose) |",
+        f"| Katakana (U+30A0–30FF) | {sum(1 for c in range(0x30A0,0x3100) if c in cmap)} | 96 (ヱ ヹ excluded on purpose) |",
         f"| JIS X 0208 kanji (levels 1+2) | {sum(1 for c in jis208 if c in cmap)} | {len(jis208)} |",
         f"| JIS X 0213 plane-1 kanji (incl. all Jōyō + Jinmeiyō) | {sum(1 for c in jis213 if c in cmap)} | {len(jis213)} |",
         f"| Fullwidth forms (U+FF01–FF5E) | {sum(1 for c in range(0xFF01,0xFF5F) if c in cmap)} | 94 |",
@@ -54,9 +54,12 @@ def write_reports(m, status: Dict[str, dict], report_dir: str) -> None:
         f"| CJK symbols & punctuation (U+3000–303F) | {sum(1 for c in range(0x3000,0x3040) if c in cmap)} | 64 |",
         "", f"Total glyphs: {len(m.order)} · code points mapped: {len(cmap)} · variation sequences: {sum(len(v) for v in m.uvs.values())}",
     ]
+    from .config import EXCLUDE_CODEPOINTS
+    cov_lines.append("\nDeliberately excluded (fall back to the next font): " + " ".join(f"{chr(c)} U+{c:04X}" for c in sorted(EXCLUDE_CODEPOINTS))
+                     + " — present: " + (" ".join(chr(c) for c in EXCLUDE_CODEPOINTS if c in cmap) or "none"))
     joyo_path = os.path.join(os.path.dirname(report_dir), "data", "joyo.txt")
     if os.path.exists(joyo_path):
-        joyo = [ch for ch in open(joyo_path, encoding="utf-8").read() if ord(ch) > 0x2E80]
+        joyo = [ch for ch in open(joyo_path, encoding="utf-8").read().strip()]
         missing = [ch for ch in joyo if ord(ch) not in cmap]
         cov_lines.append(f"\nJōyō kanji list ({len(joyo)}): {len(joyo)-len(missing)} present, missing: {''.join(missing) or 'none'}")
     open(os.path.join(report_dir, "coverage.md"), "w", encoding="utf-8").write("\n".join(cov_lines) + "\n")

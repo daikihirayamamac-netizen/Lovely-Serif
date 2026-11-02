@@ -108,8 +108,10 @@ class Glyph:
                         del c[i]; removed += 1
                         continue
                 i += 1
-            if len(c) >= 2:
+            if len(c) >= 3 or (len(c) == 2 and abs(contour_area(c)) > 4.0):
                 new_contours.append(c)
+            else:
+                removed += len(c)
         self.contours = new_contours
         return removed
 

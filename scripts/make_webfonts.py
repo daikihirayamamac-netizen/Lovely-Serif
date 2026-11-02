@@ -2,7 +2,7 @@
 """Create web deliverables from the built TTF.
 
   fonts/LovelySerif-Regular.woff2        full font (JIS X 0213 plane 1 + symbols)   ~2.1 MB
-  fonts/LovelySerif-Regular-std.woff2    web subset: Latin, kana, punctuation, JIS level-1 kanji + all Jōyō  ~1 MB
+  fonts/LovelySerif-Regular-std.woff2    web subset: Latin, kana, punctuation, JIS level-1 kanji + all 2,136 Jōyō  ~0.8 MB
   fonts/lovely-serif.css                 ready-to-use @font-face rules (std first, full as fallback via unicode-range)
 """
 import os, sys
@@ -33,10 +33,14 @@ def main():
     std |= {0x2015, 0x2016, 0x2018, 0x2019, 0x201C, 0x201D, 0x2025, 0x2026, 0x2030, 0x2032, 0x2033, 0x203B, 0x2103, 0x2116, 0x2121, 0x2122}
     std |= set(range(0x2190, 0x2194)) | set(range(0x2460, 0x2474)) | {0x25A0, 0x25A1, 0x25B2, 0x25B3, 0x25BC, 0x25BD, 0x25C6, 0x25C7, 0x25CB, 0x25CE, 0x25CF, 0x2605, 0x2606, 0x266A, 0x266D, 0x266F}
     std |= level1_kanji()
-    # JIS X 0213 kanji outside level 1 that are Jōyō: the 2010 additions all live in plane-1 rows; keep the whole
-    # JIS X 0213 level-3 block small by adding only the compatibility/Jōyō forms commonly needed
-    std |= {0x20B9F, 0x525D, 0x9830, 0x5861, 0x7E6B, 0x5F41, 0x7CF8}
+    # every Jōyō kanji (34 of them are outside JIS level 1, e.g. 鬱 丼 嘲 曖 𠮟 剝 頰 塡) plus the
+    # widely typed JIS forms of the four 2010 variants
+    joyo = [ord(c) for c in open(os.path.join(ROOT, "data", "joyo.txt"), encoding="utf-8").read().strip()]
+    std |= set(joyo) | {ord(c) for c in "叱剥頬填"}
     std = {cp for cp in std if cp in cmap}
+    missing = [chr(cp) for cp in joyo if cp not in std]
+    if missing:
+        raise SystemExit(f"std subset is missing Jōyō kanji: {''.join(missing)}")
     opts = subset.Options()
     opts.flavor = "woff2"
     opts.layout_features = ["*"]

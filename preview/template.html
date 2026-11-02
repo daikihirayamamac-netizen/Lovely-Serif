@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lovely Serif — ラブリーセリフ プレビュー</title>
 <meta name="description" content="Lovely Serif（ラブリーセリフ）— 日本語と英語のためのやわらかな明朝体。自由に文字を入力して確認できるプレビュー。">
-<link rel="preload" href="{{FONT_URL}}" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 <style>
@@ -48,10 +47,11 @@ h2 + .sub{color:var(--ink2);margin:0 0 22px;font-size:15px}
 /* specimens */
 .grid2{display:grid;grid-template-columns:1fr;gap:22px}
 @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr}}
+.grid2>*,.cmpgrid>*,.ab>*,.tester>*{min-width:0}
 .spec{padding:26px 28px}
 .spec p{margin:0 0 .9em}
 .big{font-size:34px;line-height:1.45;margin:0 0 .4em}
-.vbox{writing-mode:vertical-rl;height:420px;font-size:20px;line-height:2.1;padding:22px 26px}
+.vbox{writing-mode:vertical-rl;height:420px;font-size:20px;line-height:2.1;padding:22px 26px;max-width:100%;overflow-x:auto;overflow-y:hidden}
 .vbox p{margin:0 0 0 1.2em}
 .en{letter-spacing:.005em}
 .sizes p{margin:.2em 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -66,7 +66,8 @@ h2 + .sub{color:var(--ink2);margin:0 0 22px;font-size:15px}
 figure{margin:0;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px}
 figure img{width:100%;height:auto;display:block;border-radius:8px;background:#fff}
 figcaption{font:12px/1.5 ui-sans-serif,system-ui,sans-serif;color:var(--ink2);margin-top:8px}
-.ab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ab{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:700px){.ab{grid-template-columns:1fr 1fr}}
 .ab > div{padding:18px 20px}
 .ab .lab{font:11px ui-sans-serif,system-ui,sans-serif;letter-spacing:.2em;color:var(--ink2);margin-bottom:8px}
 .ab .t{font-size:30px;line-height:1.5}
@@ -229,9 +230,10 @@ html, body { font-family: "Lovely Serif", "Noto Serif JP", "Hiragino Mincho ProN
   <h2>状態・残る課題（v{{VERSION}}）</h2>
   <ul class="issues">
     <li>Regular 1ウェイトのみ。Light / Medium / SemiBold / Bold は、Noto Serif JP の可変軸と Nanum Myeongjo Bold を元に設計予定。</li>
-    <li>アクセント付きラテン文字（À É ñ など）は Nanum Myeongjo に無いため Noto Serif JP 由来（やや太め）。</li>
+    <li>アクセント付きラテン（À É ñ ü ç など Latin-1 全部）は Nanum の基本字＋アクセント部品で合成済み。中欧系（Č Š Ž Ő Ł 以外の Latin Extended-A の大半）は未収録で、代替フォントで表示されます。</li>
+    <li>「ゑ」「ヱ」「ヹ」「㋽」は意図的に収録していません（代替フォントで表示）。</li>
     <li>ヒンティング無し（macOS / iOS / Chrome / Safari は問題なし。Windows の小さいサイズでは輪郭が粗く見えることがあります）。</li>
-    <li>ラテンのカーニングは Nanum Myeongjo の 55 ペアのみ。追加調整の余地あり。</li>
+    <li>ラテンのカーニングは Nanum Myeongjo の 55 ペアのみ（字間の衝突は全 2,500 ペアで検査済み・0件）。</li>
     <li>手作業で字形を編集したのは代表的な文字（永 美 文 字 あ の り は か す / m n i l k ほか）。その他の文字はアルゴリズム（角の丸め・接線の平滑化・太さ補正）による自動調整です。</li>
   </ul>
 </section>

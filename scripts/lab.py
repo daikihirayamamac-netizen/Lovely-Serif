@@ -26,7 +26,7 @@ def main():
     cps = {ord(ch) for ch in a.text} | set(range(0x20, 0x7F)) | {0x3001, 0x3002, 0x300C, 0x300D, 0x30FC}
     noto = B.subset_noto(os.path.join(a.upstream, "NotoSerifJP-Regular.otf"), cps)
     nanum = TTFont(os.path.join(a.upstream, "NanumMyeongjo-Regular.ttf"))
-    ng = B.extract_nanum(nanum, {cp for cp in COV.latin_set() if cp in noto.getBestCmap()})
+    ng = B.extract_nanum(nanum, COV.latin_set())
     m = B.assemble(noto, nanum, ng)
     B.design_pass(m)
     tmp = os.path.join(os.path.dirname(a.out), ".build"); os.makedirs(tmp, exist_ok=True)

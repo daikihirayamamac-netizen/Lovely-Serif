@@ -32,6 +32,7 @@ from fontTools.ttLib.tables.ttProgram import Program
 
 from . import config as C
 from . import coverage as COV
+from .config import EXCLUDE_CODEPOINTS as COV_EXCLUDE
 from .edits import REGISTRY as EDITS, PARAM_SCALE
 from .filters import (ensure_ps_direction, offset_outline, remove_overlaps,
                       smooth_joins, soften_corners)
@@ -318,6 +319,146 @@ def categorize(name: str, cps: List[int], source: str) -> str:
     return "symbol"
 
 
+
+def _contour_bbox(c):
+    xs = [n.x for n in c]; ys = [n.y for n in c]
+    for n in c:
+        for h in (n.hin, n.hout):
+            if h is not None:
+                xs.append(h[0]); ys.append(h[1])
+    return (min(xs), min(ys), max(xs), max(ys))
+
+
+def _bbox_of(contours):
+    bbs = [_contour_bbox(c) for c in contours]
+    return (min(b[0] for b in bbs), min(b[1] for b in bbs), max(b[2] for b in bbs), max(b[3] for b in bbs))
+
+
+def _accent_by_difference(comp: Glyph, base: Glyph, base_cp: int) -> List:
+    """Accent = Noto precomposed glyph minus Noto base letter (for cedilla / ogonek drawn
+    in one contour with the letter).  Slivers along the shared edge are dropped."""
+    import pathops
+    from fontTools.pens.recordingPen import RecordingPen
+    pc = pathops.Path(); comp.draw(pc.getPen())
+    pb = pathops.Path(); base.draw(pb.getPen())
+    bb_base = _bbox_of(base.contours)
+    clip = pathops.Path(); cp_ = clip.getPen()
+    top = bb_base[1] + 14   # marks below the letter only (cedilla / ogonek / comma below)
+    cp_.moveTo((-1000, -1000)); cp_.lineTo((2000, -1000)); cp_.lineTo((2000, top)); cp_.lineTo((-1000, top)); cp_.closePath()
+    try:
+        d = pathops.op(pathops.simplify(pc, fix_winding=False), pathops.simplify(pb, fix_winding=False),
+                       pathops.PathOp.DIFFERENCE)
+        d = pathops.op(d, clip, pathops.PathOp.INTERSECTION)
+    except pathops.PathOpsError:
+        return []
+    rp = RecordingPen(); d.draw(rp)
+    g = Glyph.from_pen_records("acc", rp.value)
+    from .outline import contour_area
+    # keep only the mark itself: pieces that hang below the baseline (cedilla, ogonek, comma) or sit
+    # above the letter; long hairline slivers along the shared edge are rejected by their thickness
+    keep = []
+    for c in g.contours:
+        a = abs(contour_area(c))
+        bb = _contour_bbox(c)
+        w, h = bb[2] - bb[0], bb[3] - bb[1]
+        thickness = a / max(w, h, 1)
+        below = bb[1] < bb_base[1] - 20
+        if a > 400 and thickness > 8 and below:
+            keep.append(c)
+    if not keep or len(keep) > 3:
+        return []
+    # skia returns clockwise outer contours; flip to the CFF convention
+    tmp = Glyph("acc", 0, keep); ensure_ps_direction(tmp)
+    return tmp.contours
+
+
+def compose_accented(m: "Master", noto_glyphs: Dict[str, Glyph], noto_cmap: Dict[int, str],
+                     nanum_glyphs: Dict[int, Glyph]) -> int:
+    """Rebuild accented Latin letters (À é ñ ü ç ő …) on Nanum Myeongjo base letters.
+
+    Nanum Myeongjo has no precomposed accented letters, so v0.1 fell back to Noto Serif JP's
+    heavier Latin for them.  Here the accent contours are lifted out of Noto's precomposed glyph
+    (every contour that is not part of Noto's own base letter), re-positioned relative to the
+    Nanum base (horizontal centre, and cap-height / x-height difference for marks above) and
+    combined with the Nanum base outline."""
+    import unicodedata
+    count = 0
+    for cp in sorted(m.cmap):
+        if not (0x00C0 <= cp <= 0x017F):
+            continue
+        name = m.cmap[cp]
+        g = m.glyphs[name]
+        if g.source != "noto":
+            continue
+        dec = unicodedata.decomposition(chr(cp)).split()
+        if len(dec) != 2 or dec[0].startswith("<"):
+            continue
+        base_cp = int(dec[0], 16)
+        # recursively decomposed bases (e.g. Ǖ) are out of range here; Ã etc. are direct
+        if base_cp not in nanum_glyphs or base_cp not in noto_cmap:
+            continue
+        noto_comp = noto_glyphs[m.old_names[name]]
+        noto_base = noto_glyphs[noto_cmap[base_cp]]
+        if not noto_comp.contours or not noto_base.contours:
+            continue
+        base_bbs = [_contour_bbox(c) for c in noto_base.contours]
+        accent = []
+        for c in noto_comp.contours:
+            bb = _contour_bbox(c)
+            if any(max(abs(bb[i] - b[i]) for i in range(4)) < 6 for b in base_bbs):
+                continue
+            accent.append([n.copy() for n in c])
+        merged = False
+        bbb = _bbox_of(noto_base.contours)
+        def _overlaps_base(c):
+            bb = _contour_bbox(c)
+            ix = max(0.0, min(bb[2], bbb[2]) - max(bb[0], bbb[0])); iy = max(0.0, min(bb[3], bbb[3]) - max(bb[1], bbb[1]))
+            return ix * iy > 0.3 * (bbb[2] - bbb[0]) * (bbb[3] - bbb[1])
+        if any(_overlaps_base(c) for c in accent):
+            accent = []   # base and mark share one contour (Ç ç): cut the mark out instead
+        if not accent or len(accent) > 3:
+            accent = _accent_by_difference(noto_comp, noto_base, base_cp)
+            merged = True
+        if not accent:
+            continue
+        nb = nanum_glyphs[base_cp].copy()
+        if base_cp in (0x69, 0x6A) and len(nb.contours) >= 2:
+            # dotless form for í ì î ï ĵ: drop the dot (the topmost contour)
+            nb.contours.remove(max(nb.contours, key=lambda c: _contour_bbox(c)[1]))
+        # base letter geometry (Noto base without its i/j dot, for a fair centre)
+        nbase_contours = noto_base.contours
+        if base_cp in (0x69, 0x6A) and len(nbase_contours) >= 2:
+            nbase_contours = sorted(nbase_contours, key=lambda c: _contour_bbox(c)[1])[:-1]
+        nbb = _bbox_of(nbase_contours)
+        lbb = nb.bounds()
+        abb = _bbox_of(accent)
+        above = abb[1] > (nbb[1] + nbb[3]) / 2
+        if above:
+            dy = lbb[3] - nbb[3]
+            # keep the original gap between letter and accent
+        else:
+            dy = lbb[1] - nbb[1]
+        if dec[1] in ("0328",):  # ogonek hangs from the right foot
+            dx = lbb[2] - nbb[2]
+        elif dec[1] in ("0327",):  # cedilla centred under the letter
+            dx = (lbb[0] + lbb[2]) / 2 - (nbb[0] + nbb[2]) / 2
+        else:
+            dx = (lbb[0] + lbb[2]) / 2 - (nbb[0] + nbb[2]) / 2
+        acc = Glyph("acc", 0, accent)
+        acc.transform(1.0, 1.0, dx, dy)
+        out = nb.copy()
+        out.contours = nb.contours + acc.contours
+        out.name = name; out.unicodes = list(g.unicodes); out.source = "nanum"
+        if merged:
+            out = remove_overlaps(out)
+            out.name = name; out.unicodes = list(g.unicodes); out.source = "nanum"
+        out.notes = ["composed: nanum base + accent"]
+        m.glyphs[name] = out
+        m.category[name] = "latin"
+        count += 1
+    return count
+
+
 def assemble(noto: TTFont, nanum: TTFont, nanum_glyphs: Dict[int, Glyph]) -> Master:
     m = Master()
     m.skeleton = noto
@@ -347,6 +488,19 @@ def assemble(noto: TTFont, nanum: TTFont, nanum_glyphs: Dict[int, Glyph]) -> Mas
         m.category[new] = categorize(new, cps, g.source)
         for cp in cps:
             m.cmap[cp] = new
+    # Nanum glyphs whose code points Noto Serif JP lacks (Œ œ Ł ł Đ đ Ħ ħ Ŋ ŋ …)
+    added = 0
+    for cp, ng in sorted(nanum_glyphs.items()):
+        if cp in m.cmap or cp in COV_EXCLUDE:
+            continue
+        new = unicode_name(cp)
+        if new in m.glyphs:
+            continue
+        g = ng.copy(); g.name = new; g.unicodes = [cp]
+        m.glyphs[new] = g; m.order.append(new); m.cmap[cp] = new
+        m.vmetrics[new] = (1000, C.METRICS["defaultVertOrigin"]); m.category[new] = "latin"
+        added += 1
+    composed = compose_accented(m, noto_glyphs, cmap, nanum_glyphs)
     # fullwidth ASCII (U+FF01–FF5E) synthesised from the Nanum Latin, centred in the em
     synth = 0
     for cp in range(0xFF01, 0xFF5F):
@@ -376,7 +530,7 @@ def assemble(noto: TTFont, nanum: TTFont, nanum_glyphs: Dict[int, Glyph]) -> Mas
     for (a, b), v in pairs.items():
         if a in m.glyphs and b in m.glyphs and m.glyphs[a].source == "nanum" and m.glyphs[b].source == "nanum":
             m.kerning[(a, b)] = v
-    log(f"assembled {len(m.order)} glyphs; {replaced} Latin glyphs from Nanum, {synth} fullwidth synthesised, "
+    log(f"assembled {len(m.order)} glyphs; {replaced} Latin glyphs from Nanum, {synth} fullwidth synthesised, {composed} accented letters composed, {added} Nanum-only glyphs added, "
         f"{len(m.kerning)} kern pairs, {len(m.uvs)} UVS selectors")
     return m
 
@@ -385,8 +539,37 @@ def assemble(noto: TTFont, nanum: TTFont, nanum_glyphs: Dict[int, Glyph]) -> Mas
 # 5. design pass
 # ---------------------------------------------------------------------------
 
+def _shape(g: Glyph, cat: str, name: str, mult: float) -> Glyph:
+    """Corner softening / smoothing / weight for one glyph; ``mult`` scales every radius."""
+    b = g.bounds()
+    height = (b[3] - b[1]) if b else 0
+    pscale = PARAM_SCALE.get(name, 1.0) * mult
+    if cat == "kanji":
+        g = soften_corners(g, C.KANJI_PARAMS, min(1.0, max(0.55, height / 800.0)) * pscale)
+    elif cat == "kana":
+        g = smooth_joins(g, C.KANA_SMOOTH_ANGLE)
+        g = soften_corners(g, C.KANA_PARAMS, min(1.0, max(0.55, height / 760.0)) * pscale)
+    elif cat in ("latin", "latin-fw"):
+        g = soften_corners(g, C.LATIN_PARAMS, pscale)
+        if C.LATIN_OFFSET:
+            g = offset_outline(g, C.LATIN_OFFSET)
+            if cat == "latin":
+                # keep the original sidebearings: the ink grew by LATIN_OFFSET on each side
+                g.transform(1.0, 1.0, C.LATIN_OFFSET, 0.0)
+                g.width += 2 * C.LATIN_OFFSET
+    elif cat == "latin-noto":
+        g = soften_corners(g, C.LATIN_PARAMS, 1.3 * pscale)
+    elif cat == "punct":
+        g = soften_corners(g, C.PUNCT_PARAMS, pscale)
+    g.round()
+    g.cleanup(1.2)
+    return g
+
+
 def design_pass(m: Master) -> Dict[str, dict]:
+    from .qa import self_intersecting
     status: Dict[str, dict] = {}
+    retried = []
     for name in list(m.glyphs):
         g = m.glyphs[name]
         cat = m.category[name]
@@ -399,34 +582,31 @@ def design_pass(m: Master) -> Dict[str, dict]:
             edited = any(n.startswith("edit:") for n in g.notes)
             if edited:
                 g.notes.append("hand_edit")
+            if "edit: exit sweep" in g.notes and cat == "latin":
+                g.width += 6  # the foot grew to the right; give it room
         if not g.contours or cat in ("box", "symbol", "other"):
             m.glyphs[name] = g
             status[name] = dict(category=cat, source=g.source, modified=bool(edited), notes=list(g.notes),
                                 nodes_before=before.node_count(), nodes_after=g.node_count())
             continue
-        b = g.bounds()
-        height = (b[3] - b[1]) if b else 0
-        pscale = PARAM_SCALE.get(name, 1.0)
-        if cat == "kanji":
-            scale = min(1.0, max(0.55, height / 800.0)) * pscale
-            g = soften_corners(g, C.KANJI_PARAMS, scale)
-        elif cat == "kana":
-            scale = min(1.0, max(0.55, height / 760.0)) * pscale
-            g = smooth_joins(g, C.KANA_SMOOTH_ANGLE)
-            g = soften_corners(g, C.KANA_PARAMS, scale)
-        elif cat in ("latin", "latin-fw"):
-            g = soften_corners(g, C.LATIN_PARAMS, pscale)
-            if C.LATIN_OFFSET:
-                g = offset_outline(g, C.LATIN_OFFSET)
-        elif cat == "latin-noto":
-            g = soften_corners(g, C.LATIN_PARAMS, 1.3 * pscale)
-        elif cat == "punct":
-            g = soften_corners(g, C.PUNCT_PARAMS, pscale)
-        g.round()
-        g.cleanup(1.2)
+        base_si = len(self_intersecting(g))
+        out = None
+        for mult in (1.0, 0.6, 0.35, 0.0):
+            cand = _shape(g.copy(), cat, name, mult) if mult else g.copy()
+            if mult == 0.0:
+                cand.round(); cand.cleanup(1.2)
+            if len(self_intersecting(cand)) <= base_si:
+                out = cand
+                if mult < 1.0:
+                    out.notes.append(f"fallback(radius x{mult})")
+                    retried.append(name)
+                break
+        g = out
         m.glyphs[name] = g
         status[name] = dict(category=cat, source=g.source, modified=bool(g.notes), notes=list(g.notes),
                             nodes_before=before.node_count(), nodes_after=g.node_count(), hand_edit=edited)
+    if retried:
+        log(f"design pass: {len(retried)} glyphs re-shaped with smaller radii to avoid self-intersection: {' '.join(retried[:20])}")
     return status
 
 
@@ -709,7 +889,7 @@ def build(upstream: str, out_dir: str, ufo_path: Optional[str] = None, report_di
     noto = subset_noto(os.path.join(upstream, "NotoSerifJP-Regular.otf"), target)
     log(f"Noto Serif JP subset: {len(noto.getGlyphOrder())} glyphs")
     nanum = TTFont(os.path.join(upstream, "NanumMyeongjo-Regular.ttf"))
-    nanum_cps = {cp for cp in COV.latin_set() if cp in noto.getBestCmap()}
+    nanum_cps = {cp for cp in COV.latin_set() if cp not in C.EXCLUDE_CODEPOINTS}
     nanum_glyphs = extract_nanum(nanum, nanum_cps)
     log(f"Nanum Myeongjo Latin glyphs extracted: {len(nanum_glyphs)}")
     m = assemble(noto, nanum, nanum_glyphs)

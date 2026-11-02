@@ -1,0 +1,2609 @@
+{
+"exclam": {
+"xor": 0.115,
+"area": 0.112
+},
+"quotedbl": {
+"xor": 0.147,
+"area": 0.147
+},
+"numbersign": {
+"xor": 0.159,
+"area": 0.152
+},
+"dollar": {
+"xor": 0.154,
+"area": 0.152
+},
+"percent": {
+"xor": 0.134,
+"area": 0.133
+},
+"ampersand": {
+"xor": 0.146,
+"area": 0.145
+},
+"quotesingle": {
+"xor": 0.164,
+"area": 0.164
+},
+"parenleft": {
+"xor": 0.11,
+"area": 0.104
+},
+"parenright": {
+"xor": 0.118,
+"area": 0.112
+},
+"asterisk": {
+"xor": 0.128,
+"area": 0.128
+},
+"plus": {
+"xor": 0.177,
+"area": 0.177
+},
+"comma": {
+"xor": 0.126,
+"area": 0.126
+},
+"hyphen": {
+"xor": 0.382,
+"area": 0.382
+},
+"period": {
+"xor": 0.111,
+"area": 0.111
+},
+"slash": {
+"xor": 0.119,
+"area": 0.115
+},
+"zero": {
+"xor": 0.107,
+"area": 0.105
+},
+"two": {
+"xor": 0.121,
+"area": 0.121
+},
+"three": {
+"xor": 0.118,
+"area": 0.118
+},
+"four": {
+"xor": 0.194,
+"area": 0.19
+},
+"five": {
+"xor": 0.126,
+"area": 0.126
+},
+"six": {
+"xor": 0.118,
+"area": 0.116
+},
+"seven": {
+"xor": 0.134,
+"area": 0.134
+},
+"eight": {
+"xor": 0.121,
+"area": 0.12
+},
+"nine": {
+"xor": 0.108,
+"area": 0.108
+},
+"colon": {
+"xor": 0.107,
+"area": 0.107
+},
+"semicolon": {
+"xor": 0.093,
+"area": 0.093
+},
+"less": {
+"xor": 0.139,
+"area": 0.139
+},
+"equal": {
+"xor": 0.094,
+"area": 0.084
+},
+"greater": {
+"xor": 0.147,
+"area": 0.141
+},
+"question": {
+"xor": 0.134,
+"area": 0.134
+},
+"at": {
+"xor": 0.132,
+"area": 0.131
+},
+"A": {
+"xor": 0.111,
+"area": 0.111
+},
+"B": {
+"xor": 0.114,
+"area": 0.114
+},
+"C": {
+"xor": 0.131,
+"area": 0.131
+},
+"D": {
+"area": 0.062
+},
+"E": {
+"xor": 0.138,
+"area": 0.135
+},
+"F": {
+"xor": 0.122,
+"area": 0.122
+},
+"G": {
+"xor": 0.11,
+"area": 0.11
+},
+"H": {
+"xor": 0.138,
+"area": 0.136
+},
+"I": {
+"xor": 0.117,
+"area": 0.112
+},
+"J": {
+"xor": 0.128,
+"area": 0.121
+},
+"K": {
+"xor": 0.13,
+"area": 0.126
+},
+"L": {
+"xor": 0.15,
+"area": 0.15
+},
+"M": {
+"xor": 0.111,
+"area": 0.108
+},
+"N": {
+"xor": 0.16,
+"area": 0.16
+},
+"O": {
+"xor": 0.12,
+"area": 0.12
+},
+"P": {
+"xor": 0.117,
+"area": 0.116
+},
+"Q": {
+"xor": 0.123,
+"area": 0.123
+},
+"R": {
+"xor": 0.141,
+"area": 0.141
+},
+"S": {
+"xor": 0.122,
+"area": 0.122
+},
+"T": {
+"area": 0.07
+},
+"U": {
+"xor": 0.184,
+"area": 0.11
+},
+"V": {
+"xor": 0.124,
+"area": 0.124
+},
+"W": {
+"xor": 0.12,
+"area": 0.112
+},
+"X": {
+"xor": 0.127,
+"area": 0.127
+},
+"Y": {
+"xor": 0.102,
+"area": 0.102
+},
+"Z": {
+"xor": 0.14,
+"area": 0.14
+},
+"bracketleft": {
+"xor": 0.17,
+"area": 0.168
+},
+"backslash": {
+"xor": 0.121,
+"area": 0.117
+},
+"bracketright": {
+"area": 0.063
+},
+"asciicircum": {
+"xor": 0.128,
+"area": 0.123
+},
+"grave": {
+"xor": 0.137,
+"area": 0.137
+},
+"a": {
+"xor": 0.146,
+"area": 0.146
+},
+"b": {
+"xor": 0.133,
+"area": 0.13
+},
+"c": {
+"xor": 0.127,
+"area": 0.127
+},
+"d": {
+"area": 0.066
+},
+"e": {
+"xor": 0.113,
+"area": 0.113
+},
+"f": {
+"xor": 0.105,
+"area": 0.105
+},
+"g": {
+"xor": 0.118,
+"area": 0.118
+},
+"h": {
+"xor": 0.153,
+"area": 0.151
+},
+"j": {
+"xor": 0.141,
+"area": 0.141
+},
+"o": {
+"xor": 0.118,
+"area": 0.118
+},
+"p": {
+"xor": 0.129,
+"area": 0.129
+},
+"q": {
+"xor": 0.125,
+"area": 0.125
+},
+"r": {
+"xor": 0.166,
+"area": 0.166
+},
+"s": {
+"xor": 0.135,
+"area": 0.132
+},
+"t": {
+"xor": 0.16,
+"area": 0.16
+},
+"u": {
+"xor": 0.168,
+"area": 0.168
+},
+"v": {
+"xor": 0.125,
+"area": 0.125
+},
+"w": {
+"xor": 0.125,
+"area": 0.118
+},
+"x": {
+"xor": 0.141,
+"area": 0.139
+},
+"y": {
+"xor": 0.131,
+"area": 0.131
+},
+"z": {
+"xor": 0.122,
+"area": 0.119
+},
+"braceleft": {
+"xor": 0.157,
+"area": 0.157
+},
+"braceright": {
+"xor": 0.156,
+"area": 0.156
+},
+"asciitilde": {
+"xor": 0.138,
+"area": 0.133
+},
+"exclamdown": {
+"xor": 0.112,
+"area": 0.112
+},
+"cent": {
+"xor": 0.143,
+"area": 0.139
+},
+"sterling": {
+"xor": 0.126,
+"area": 0.125
+},
+"currency": {
+"xor": 0.153,
+"area": 0.152
+},
+"yen": {
+"xor": 0.107,
+"area": 0.107
+},
+"copyright": {
+"xor": 0.159,
+"area": 0.158
+},
+"ordfeminine": {
+"xor": 0.121,
+"area": 0.072
+},
+"guillemotleft": {
+"xor": 0.163,
+"area": 0.158
+},
+"logicalnot": {
+"xor": 0.195,
+"area": 0.195
+},
+"registered": {
+"xor": 0.175,
+"area": 0.172
+},
+"uni00B2": {
+"xor": 0.099,
+"area": 0.099
+},
+"uni00B3": {
+"xor": 0.128,
+"area": 0.128
+},
+"mu": {
+"xor": 0.164,
+"area": 0.164
+},
+"uni00B9": {
+"xor": 0.157,
+"area": 0.157
+},
+"ordmasculine": {
+"xor": 0.114,
+"area": 0.114
+},
+"guillemotright": {
+"xor": 0.156,
+"area": 0.152
+},
+"onequarter": {
+"xor": 0.09,
+"area": 0.09
+},
+"onehalf": {
+"xor": 0.109,
+"area": 0.109
+},
+"threequarters": {
+"xor": 0.144,
+"area": 0.141
+},
+"questiondown": {
+"xor": 0.13,
+"area": 0.128
+},
+"Agrave": {
+"xor": 0.113,
+"area": 0.113
+},
+"Aacute": {
+"xor": 0.113,
+"area": 0.113
+},
+"Acircumflex": {
+"xor": 0.111,
+"area": 0.111
+},
+"Atilde": {
+"xor": 0.116,
+"area": 0.116
+},
+"Adieresis": {
+"xor": 0.11,
+"area": 0.11
+},
+"Aring": {
+"xor": 0.117,
+"area": 0.117
+},
+"AE": {
+"xor": 0.137,
+"area": 0.136
+},
+"Ccedilla": {
+"xor": 0.135,
+"area": 0.132
+},
+"Egrave": {
+"xor": 0.134,
+"area": 0.132
+},
+"Eacute": {
+"xor": 0.141,
+"area": 0.137
+},
+"Ecircumflex": {
+"xor": 0.138,
+"area": 0.136
+},
+"Edieresis": {
+"xor": 0.13,
+"area": 0.128
+},
+"Igrave": {
+"xor": 0.119,
+"area": 0.115
+},
+"Iacute": {
+"xor": 0.118,
+"area": 0.114
+},
+"Icircumflex": {
+"xor": 0.123,
+"area": 0.119
+},
+"Idieresis": {
+"xor": 0.117,
+"area": 0.112
+},
+"Eth": {
+"area": 0.071
+},
+"Ntilde": {
+"xor": 0.157,
+"area": 0.157
+},
+"Ograve": {
+"xor": 0.121,
+"area": 0.121
+},
+"Oacute": {
+"xor": 0.12,
+"area": 0.12
+},
+"Ocircumflex": {
+"xor": 0.123,
+"area": 0.123
+},
+"Otilde": {
+"xor": 0.124,
+"area": 0.123
+},
+"Odieresis": {
+"xor": 0.116,
+"area": 0.116
+},
+"Oslash": {
+"xor": 0.112,
+"area": 0.111
+},
+"Ugrave": {
+"xor": 0.177,
+"area": 0.111
+},
+"Uacute": {
+"xor": 0.179,
+"area": 0.114
+},
+"Ucircumflex": {
+"xor": 0.178,
+"area": 0.115
+},
+"Udieresis": {
+"xor": 0.169,
+"area": 0.107
+},
+"Yacute": {
+"xor": 0.104,
+"area": 0.104
+},
+"Thorn": {
+"xor": 0.122,
+"area": 0.118
+},
+"germandbls": {
+"xor": 0.107,
+"area": 0.107
+},
+"agrave": {
+"xor": 0.142,
+"area": 0.142
+},
+"aacute": {
+"xor": 0.142,
+"area": 0.142
+},
+"acircumflex": {
+"xor": 0.141,
+"area": 0.141
+},
+"atilde": {
+"xor": 0.141,
+"area": 0.141
+},
+"adieresis": {
+"xor": 0.139,
+"area": 0.137
+},
+"aring": {
+"xor": 0.152,
+"area": 0.15
+},
+"ae": {
+"xor": 0.118,
+"area": 0.118
+},
+"ccedilla": {
+"xor": 0.14,
+"area": 0.137
+},
+"egrave": {
+"xor": 0.115,
+"area": 0.115
+},
+"eacute": {
+"xor": 0.115,
+"area": 0.115
+},
+"ecircumflex": {
+"xor": 0.117,
+"area": 0.116
+},
+"edieresis": {
+"xor": 0.107,
+"area": 0.107
+},
+"igrave": {
+"xor": 0.152,
+"area": 0.152
+},
+"iacute": {
+"xor": 0.155,
+"area": 0.155
+},
+"icircumflex": {
+"xor": 0.14,
+"area": 0.14
+},
+"idieresis": {
+"xor": 0.135,
+"area": 0.135
+},
+"eth": {
+"xor": 0.114,
+"area": 0.113
+},
+"ntilde": {
+"xor": 0.164,
+"area": 0.163
+},
+"ograve": {
+"xor": 0.121,
+"area": 0.121
+},
+"oacute": {
+"xor": 0.118,
+"area": 0.118
+},
+"ocircumflex": {
+"xor": 0.12,
+"area": 0.12
+},
+"otilde": {
+"xor": 0.122,
+"area": 0.122
+},
+"odieresis": {
+"xor": 0.113,
+"area": 0.113
+},
+"oslash": {
+"xor": 0.114,
+"area": 0.111
+},
+"ugrave": {
+"xor": 0.162,
+"area": 0.162
+},
+"uacute": {
+"xor": 0.162,
+"area": 0.162
+},
+"ucircumflex": {
+"xor": 0.165,
+"area": 0.165
+},
+"udieresis": {
+"xor": 0.151,
+"area": 0.151
+},
+"yacute": {
+"xor": 0.131,
+"area": 0.131
+},
+"thorn": {
+"xor": 0.134,
+"area": 0.131
+},
+"ydieresis": {
+"xor": 0.122,
+"area": 0.122
+},
+"Amacron": {
+"xor": 0.095,
+"area": 0.093
+},
+"amacron": {
+"xor": 0.186,
+"area": 0.186
+},
+"Abreve": {
+"xor": 0.116,
+"area": 0.116
+},
+"abreve": {
+"xor": 0.145,
+"area": 0.145
+},
+"dcroat": {
+"xor": 0.083,
+"area": 0.08
+},
+"Emacron": {
+"xor": 0.122,
+"area": 0.12
+},
+"emacron": {
+"xor": 0.161,
+"area": 0.161
+},
+"Ecaron": {
+"xor": 0.142,
+"area": 0.139
+},
+"ecaron": {
+"xor": 0.117,
+"area": 0.117
+},
+"Itilde": {
+"xor": 0.125,
+"area": 0.12
+},
+"itilde": {
+"xor": 0.154,
+"area": 0.154
+},
+"Imacron": {
+"xor": 0.093,
+"area": 0.087
+},
+"imacron": {
+"xor": 0.115,
+"area": 0.109
+},
+"Nacute": {
+"xor": 0.158,
+"area": 0.158
+},
+"nacute": {
+"xor": 0.167,
+"area": 0.165
+},
+"Ncaron": {
+"xor": 0.16,
+"area": 0.16
+},
+"ncaron": {
+"xor": 0.162,
+"area": 0.161
+},
+"Omacron": {
+"xor": 0.108,
+"area": 0.108
+},
+"omacron": {
+"xor": 0.16,
+"area": 0.16
+},
+"Obreve": {
+"xor": 0.123,
+"area": 0.123
+},
+"obreve": {
+"xor": 0.123,
+"area": 0.123
+},
+"OE": {
+"xor": 0.136,
+"area": 0.136
+},
+"oe": {
+"xor": 0.118,
+"area": 0.118
+},
+"Utilde": {
+"xor": 0.183,
+"area": 0.122
+},
+"utilde": {
+"xor": 0.163,
+"area": 0.161
+},
+"Umacron": {
+"xor": 0.16,
+"area": 0.097
+},
+"umacron": {
+"xor": 0.144,
+"area": 0.144
+},
+"Ubreve": {
+"xor": 0.177,
+"area": 0.114
+},
+"ubreve": {
+"xor": 0.164,
+"area": 0.164
+},
+"quotesinglbase": {
+"xor": 0.131,
+"area": 0.131
+},
+"quotedblbase": {
+"xor": 0.128,
+"area": 0.128
+},
+"guilsinglleft": {
+"xor": 0.178,
+"area": 0.173
+},
+"guilsinglright": {
+"xor": 0.171,
+"area": 0.171
+},
+"exclamdbl": {
+"xor": 0.123,
+"area": 0.123
+},
+"uni2042": {
+"xor": 0.153,
+"area": 0.152
+},
+"uni20A9": {
+"xor": 0.129,
+"area": 0.122
+},
+"Euro": {
+"xor": 0.136,
+"area": 0.136
+},
+"trademark": {
+"xor": 0.22,
+"area": 0.165
+},
+"uni301C": {
+"xor": 0.143,
+"area": 0.143
+},
+"uni459D": {
+"bbox": 15.0
+},
+"uni4E91": {
+"bbox": 16.0
+},
+"uni4ECF": {
+"bbox": 16.0
+},
+"uni4F1A": {
+"bbox": 14.0
+},
+"uni4F1D": {
+"bbox": 14.0
+},
+"uni4F49": {
+"bbox": 14.0
+},
+"uni4F9B": {
+"bbox": 13.0
+},
+"uni4FF1": {
+"bbox": 13.0
+},
+"uni5074": {
+"bbox": 14.0
+},
+"uni5078": {
+"bbox": 15.0
+},
+"uni50BE": {
+"bbox": 13.0
+},
+"uni516C": {
+"bbox": 14.0
+},
+"uni516D": {
+"bbox": 15.0
+},
+"uni51B6": {
+"bbox": 13.0
+},
+"uni51DE": {
+"bbox": 15.0
+},
+"uni5247": {
+"bbox": 15.0
+},
+"uni528D": {
+"bbox": 13.0
+},
+"uni52F2": {
+"bbox": 15.0
+},
+"uni53B6": {
+"bbox": 16.0
+},
+"uni53BB": {
+"bbox": 14.0
+},
+"uni53EA": {
+"bbox": 13.0
+},
+"uni53F0": {
+"bbox": 13.0
+},
+"uni544D": {
+"bbox": 16.0
+},
+"uni545F": {
+"bbox": 13.0
+},
+"uni547F": {
+"bbox": 13.0
+},
+"uni54A5": {
+"bbox": 13.0
+},
+"uni54C4": {
+"bbox": 15.0
+},
+"uni5504": {
+"bbox": 14.0
+},
+"uni5539": {
+"bbox": 15.0
+},
+"uni55A9": {
+"bbox": 13.0
+},
+"uni55E4": {
+"bbox": 14.0
+},
+"uni5638": {
+"bbox": 17.0
+},
+"uni5678": {
+"bbox": 14.0
+},
+"uni56A5": {
+"bbox": 17.0
+},
+"uni56AC": {
+"bbox": 14.0
+},
+"uni56C8": {
+"bbox": 14.0
+},
+"uni5793": {
+"bbox": 13.0
+},
+"uni57A4": {
+"bbox": 13.0
+},
+"uni5809": {
+"bbox": 13.0
+},
+"uni58CE": {
+"bbox": 15.0
+},
+"uni5957": {
+"bbox": 13.0
+},
+"uni5999": {
+"bbox": 13.0
+},
+"uni59D2": {
+"bbox": 13.0
+},
+"uni5A11": {
+"bbox": 13.0
+},
+"uni5A2F": {
+"bbox": 15.0
+},
+"uni5A7E": {
+"bbox": 16.0
+},
+"uni5B5A": {
+"bbox": 14.0
+},
+"uni5B69": {
+"bbox": 13.0
+},
+"uni5B75": {
+"bbox": 13.0
+},
+"uni5B8D": {
+"bbox": 15.0
+},
+"uni5B8F": {
+"bbox": 16.0
+},
+"uni5B93": {
+"bbox": 13.0
+},
+"uni5B97": {
+"bbox": 13.0
+},
+"uni5C0F": {
+"bbox": 13.0
+},
+"uni5CC5": {
+"bbox": 13.0
+},
+"uni5CD0": {
+"bbox": 13.0
+},
+"uni5D27": {
+"bbox": 15.0
+},
+"uni5D8C": {
+"bbox": 14.0
+},
+"uni5DAE": {
+"bbox": 13.0
+},
+"uni5DBC": {
+"bbox": 13.0
+},
+"uni5DDB": {
+"bbox": 15.0
+},
+"uni5DE1": {
+"bbox": 13.0
+},
+"uni5E4E": {
+"bbox": 13.0
+},
+"uni5E7A": {
+"bbox": 15.0
+},
+"uni5E83": {
+"bbox": 16.0
+},
+"uni5EB6": {
+"bbox": 17.0
+},
+"uni5EC1": {
+"bbox": 17.0
+},
+"uni5EE1": {
+"bbox": 17.0
+},
+"uni5F18": {
+"bbox": 19.0
+},
+"uni5F26": {
+"bbox": 17.0
+},
+"uni5F27": {
+"bbox": 16.0
+},
+"uni5F37": {
+"bbox": 14.0
+},
+"uni5FB3": {
+"bbox": 13.0
+},
+"uni5FC5": {
+"bbox": 13.0
+},
+"uni5FCD": {
+"bbox": 13.0
+},
+"uni5FD7": {
+"bbox": 13.0
+},
+"uni5FD8": {
+"bbox": 13.0
+},
+"uni5FDE": {
+"bbox": 13.0
+},
+"uni5FE0": {
+"bbox": 13.0
+},
+"uni5FE9": {
+"bbox": 13.0
+},
+"uni6012": {
+"bbox": 13.0
+},
+"uni6018": {
+"bbox": 13.0
+},
+"uni6020": {
+"bbox": 13.0
+},
+"uni6025": {
+"bbox": 13.0
+},
+"uni6028": {
+"bbox": 13.0
+},
+"uni602F": {
+"bbox": 14.0
+},
+"uni6031": {
+"bbox": 13.0
+},
+"uni604B": {
+"bbox": 13.0
+},
+"uni6050": {
+"bbox": 13.0
+},
+"uni6055": {
+"bbox": 13.0
+},
+"uni6059": {
+"bbox": 13.0
+},
+"uni605A": {
+"bbox": 15.0
+},
+"uni6069": {
+"bbox": 13.0
+},
+"uni606F": {
+"bbox": 13.0
+},
+"uni6075": {
+"bbox": 13.0
+},
+"uni6089": {
+"bbox": 13.0
+},
+"uni60A3": {
+"bbox": 13.0
+},
+"uni60AA": {
+"bbox": 13.0
+},
+"uni60B2": {
+"bbox": 13.0
+},
+"uni60B3": {
+"bbox": 13.0
+},
+"uni60D1": {
+"bbox": 13.0
+},
+"uni60E0": {
+"bbox": 14.0
+},
+"uni60E1": {
+"bbox": 13.0
+},
+"uni60E3": {
+"bbox": 13.0
+},
+"uni60F1": {
+"bbox": 13.0
+},
+"uni60F7": {
+"bbox": 13.0
+},
+"uni60F9": {
+"bbox": 13.0
+},
+"uni6101": {
+"bbox": 13.0
+},
+"uni6106": {
+"bbox": 15.0
+},
+"uni6108": {
+"bbox": 13.0
+},
+"uni610D": {
+"bbox": 13.0
+},
+"uni610F": {
+"bbox": 13.0
+},
+"uni611A": {
+"bbox": 15.0
+},
+"uni611F": {
+"bbox": 15.0
+},
+"uni6128": {
+"bbox": 15.0
+},
+"uni612C": {
+"bbox": 15.0
+},
+"uni613F": {
+"bbox": 14.0
+},
+"uni6147": {
+"bbox": 15.0
+},
+"uni6148": {
+"bbox": 13.0
+},
+"uni6159": {
+"bbox": 13.0
+},
+"uni6167": {
+"bbox": 13.0
+},
+"uni616B": {
+"bbox": 15.0
+},
+"uni6170": {
+"bbox": 13.0
+},
+"uni617E": {
+"bbox": 13.0
+},
+"uni6187": {
+"bbox": 15.0
+},
+"uni618A": {
+"bbox": 14.0
+},
+"uni6191": {
+"bbox": 14.0
+},
+"uni6194": {
+"bbox": 15.0
+},
+"uni6196": {
+"bbox": 16.0
+},
+"uni6199": {
+"bbox": 15.0
+},
+"uni61A9": {
+"bbox": 15.0
+},
+"uni61AE": {
+"bbox": 14.0
+},
+"uni61B2": {
+"bbox": 14.0
+},
+"uni61BC": {
+"bbox": 13.0
+},
+"uni61C3": {
+"bbox": 15.0
+},
+"uni61C7": {
+"bbox": 16.0
+},
+"uni61CB": {
+"bbox": 16.0
+},
+"uni61F2": {
+"bbox": 14.0
+},
+"uni61F6": {
+"bbox": 13.0
+},
+"uni6255": {
+"bbox": 14.0
+},
+"uni62E1": {
+"bbox": 16.0
+},
+"uni62F1": {
+"bbox": 15.0
+},
+"uni62F6": {
+"bbox": 13.0
+},
+"uni6318": {
+"bbox": 13.0
+},
+"uni63BB": {
+"bbox": 14.0
+},
+"uni63C4": {
+"bbox": 16.0
+},
+"uni6414": {
+"bbox": 13.0
+},
+"uni649A": {
+"bbox": 17.0
+},
+"uni64AB": {
+"bbox": 15.0
+},
+"uni64BF": {
+"bbox": 13.0
+},
+"uni64F7": {
+"bbox": 15.0
+},
+"uni6529": {
+"bbox": 14.0
+},
+"uni65BC": {
+"bbox": 13.0
+},
+"uni663F": {
+"bbox": 15.0
+},
+"uni6648": {
+"bbox": 13.0
+},
+"uni66DB": {
+"bbox": 15.0
+},
+"uni6770": {
+"bbox": 15.0
+},
+"uni677E": {
+"bbox": 15.0
+},
+"uni67A9": {
+"bbox": 14.0
+},
+"uni67B3": {
+"bbox": 14.0
+},
+"uni6831": {
+"bbox": 14.0
+},
+"uni6838": {
+"bbox": 14.0
+},
+"uni6867": {
+"bbox": 14.0
+},
+"uni6881": {
+"bbox": 13.0
+},
+"uni68CB": {
+"bbox": 13.0
+},
+"uni6961": {
+"bbox": 15.0
+},
+"uni6968": {
+"bbox": 13.0
+},
+"uni69A0": {
+"bbox": 13.0
+},
+"uni69F5": {
+"bbox": 14.0
+},
+"uni6A35": {
+"bbox": 17.0
+},
+"uni6A45": {
+"bbox": 15.0
+},
+"uni6AA2": {
+"bbox": 13.0
+},
+"uni6AC1": {
+"bbox": 14.0
+},
+"uni6B1D": {
+"bbox": 13.0
+},
+"uni6BDF": {
+"bbox": 13.0
+},
+"uni6CBB": {
+"bbox": 13.0
+},
+"uni6CD3": {
+"bbox": 17.0
+},
+"uni6CEB": {
+"bbox": 14.0
+},
+"uni6D2A": {
+"bbox": 14.0
+},
+"uni6D64": {
+"bbox": 14.0
+},
+"uni6DBC": {
+"bbox": 13.0
+},
+"uni6DDE": {
+"bbox": 15.0
+},
+"uni6DE4": {
+"bbox": 14.0
+},
+"uni6DE8": {
+"bbox": 13.0
+},
+"uni6DFB": {
+"bbox": 13.0
+},
+"uni6E09": {
+"bbox": 13.0
+},
+"uni6E0B": {
+"bbox": 13.0
+},
+"uni6E1D": {
+"bbox": 15.0
+},
+"uni6ECB": {
+"bbox": 16.0
+},
+"uni6F41": {
+"bbox": 13.0
+},
+"uni6F59": {
+"bbox": 13.0
+},
+"uni7015": {
+"bbox": 14.0
+},
+"uni7028": {
+"bbox": 14.0
+},
+"uni702C": {
+"bbox": 14.0
+},
+"uni705D": {
+"bbox": 14.0
+},
+"uni70AB": {
+"bbox": 15.0
+},
+"uni70B9": {
+"bbox": 15.0
+},
+"uni70C8": {
+"bbox": 16.0
+},
+"uni70CB": {
+"bbox": 15.0
+},
+"uni70D8": {
+"bbox": 15.0
+},
+"uni70DD": {
+"bbox": 15.0
+},
+"uni70F9": {
+"bbox": 15.0
+},
+"uni710F": {
+"bbox": 14.0
+},
+"uni7121": {
+"bbox": 15.0
+},
+"uni7126": {
+"bbox": 14.0
+},
+"uni7136": {
+"bbox": 14.0
+},
+"uni714E": {
+"bbox": 15.0
+},
+"uni7155": {
+"bbox": 15.0
+},
+"uni7166": {
+"bbox": 15.0
+},
+"uni7167": {
+"bbox": 15.0
+},
+"uni716E": {
+"bbox": 16.0
+},
+"uni7184": {
+"bbox": 13.0
+},
+"uni7188": {
+"bbox": 15.0
+},
+"uni718A": {
+"bbox": 16.0
+},
+"uni718F": {
+"bbox": 14.0
+},
+"uni7199": {
+"bbox": 15.0
+},
+"uni719F": {
+"bbox": 16.0
+},
+"uni71AC": {
+"bbox": 16.0
+},
+"uni71B1": {
+"bbox": 16.0
+},
+"uni71B9": {
+"bbox": 13.0
+},
+"uni71C3": {
+"bbox": 15.0
+},
+"uni71D5": {
+"bbox": 14.0
+},
+"uni71FB": {
+"bbox": 15.0
+},
+"uni71FE": {
+"bbox": 13.0
+},
+"uni7235": {
+"bbox": 15.0
+},
+"uni72EC": {
+"bbox": 16.0
+},
+"uni72FD": {
+"bbox": 14.0
+},
+"uni7344": {
+"bbox": 13.0
+},
+"uni7384": {
+"bbox": 15.0
+},
+"uni73D9": {
+"bbox": 15.0
+},
+"uni742A": {
+"bbox": 14.0
+},
+"uni743A": {
+"bbox": 16.0
+},
+"uni745C": {
+"bbox": 17.0
+},
+"uni7463": {
+"bbox": 13.0
+},
+"uni74B5": {
+"bbox": 13.0
+},
+"uni74DC": {
+"bbox": 15.0
+},
+"uni7546": {
+"bbox": 17.0
+},
+"uni75C3": {
+"bbox": 14.0
+},
+"uni75E3": {
+"bbox": 13.0
+},
+"uni7669": {
+"bbox": 14.0
+},
+"uni766A": {
+"bbox": 13.0
+},
+"uni7672": {
+"bbox": 15.0
+},
+"uni7729": {
+"bbox": 14.0
+},
+"uni783F": {
+"bbox": 17.0
+},
+"uni78A9": {
+"bbox": 13.0
+},
+"uni78AF": {
+"bbox": 13.0
+},
+"uni78B5": {
+"bbox": 13.0
+},
+"uni78C1": {
+"bbox": 14.0
+},
+"uni797A": {
+"bbox": 13.0
+},
+"uni798E": {
+"bbox": 13.0
+},
+"uni79C1": {
+"bbox": 15.0
+},
+"uni7A4E": {
+"bbox": 14.0
+},
+"uni7A93": {
+"bbox": 13.0
+},
+"uni7AAF": {
+"bbox": 14.0
+},
+"uni7AB3": {
+"bbox": 15.0
+},
+"uni7ABB": {
+"bbox": 16.0
+},
+"uni7BF6": {
+"bbox": 14.0
+},
+"uni7C12": {
+"bbox": 13.0
+},
+"uni7CA0": {
+"bbox": 13.0
+},
+"uni7CB1": {
+"bbox": 13.0
+},
+"uni7CBC": {
+"bbox": 13.0
+},
+"uni7CD5": {
+"bbox": 16.0
+},
+"uni7CF8": {
+"bbox": 13.0
+},
+"uni7CFB": {
+"bbox": 13.0
+},
+"uni7D18": {
+"bbox": 15.0
+},
+"uni7D1C": {
+"bbox": 16.0
+},
+"uni7D20": {
+"bbox": 13.0
+},
+"uni7D43": {
+"bbox": 14.0
+},
+"uni7D4B": {
+"bbox": 16.0
+},
+"uni7D75": {
+"bbox": 14.0
+},
+"uni7D8B": {
+"bbox": 14.0
+},
+"uni7D93": {
+"bbox": 13.0
+},
+"uni7DC7": {
+"bbox": 13.0
+},
+"uni7E3B": {
+"bbox": 13.0
+},
+"uni7E47": {
+"bbox": 13.0
+},
+"uni7E66": {
+"bbox": 15.0
+},
+"uni7E67": {
+"bbox": 15.0
+},
+"uni7E88": {
+"bbox": 14.0
+},
+"uni7E90": {
+"bbox": 14.0
+},
+"uni7F6B": {
+"bbox": 13.0
+},
+"uni7F86": {
+"bbox": 14.0
+},
+"uni7F94": {
+"bbox": 15.0
+},
+"uni8018": {
+"bbox": 16.0
+},
+"uni80B1": {
+"bbox": 15.0
+},
+"uni80DA": {
+"bbox": 13.0
+},
+"uni8146": {
+"bbox": 14.0
+},
+"uni8167": {
+"bbox": 14.0
+},
+"uni81D9": {
+"bbox": 15.0
+},
+"uni8229": {
+"bbox": 15.0
+},
+"uni8237": {
+"bbox": 14.0
+},
+"uni82AF": {
+"bbox": 13.0
+},
+"uni82B8": {
+"bbox": 15.0
+},
+"uni82E1": {
+"bbox": 15.0
+},
+"uni82FD": {
+"bbox": 14.0
+},
+"uni82FE": {
+"bbox": 13.0
+},
+"uni8332": {
+"bbox": 15.0
+},
+"uni8375": {
+"bbox": 16.0
+},
+"uni83D8": {
+"bbox": 15.0
+},
+"uni83F0": {
+"bbox": 15.0
+},
+"uni8471": {
+"bbox": 17.0
+},
+"uni84B8": {
+"bbox": 13.0
+},
+"uni8517": {
+"bbox": 15.0
+},
+"uni852D": {
+"bbox": 13.0
+},
+"uni8549": {
+"bbox": 15.0
+},
+"uni8559": {
+"bbox": 14.0
+},
+"uni856A": {
+"bbox": 14.0
+},
+"uni85AB": {
+"bbox": 13.0
+},
+"uni85B0": {
+"bbox": 14.0
+},
+"uni8605": {
+"bbox": 14.0
+},
+"uni8613": {
+"bbox": 15.0
+},
+"uni8638": {
+"bbox": 14.0
+},
+"uni866B": {
+"bbox": 15.0
+},
+"uni86A3": {
+"bbox": 16.0
+},
+"uni86A4": {
+"bbox": 15.0
+},
+"uni86A9": {
+"bbox": 14.0
+},
+"uni86CB": {
+"bbox": 15.0
+},
+"uni86E9": {
+"bbox": 15.0
+},
+"uni86EC": {
+"bbox": 16.0
+},
+"uni86EE": {
+"bbox": 15.0
+},
+"uni86FD": {
+"bbox": 13.0
+},
+"uni8703": {
+"bbox": 14.0
+},
+"uni8711": {
+"bbox": 14.0
+},
+"uni871A": {
+"bbox": 15.0
+},
+"uni871C": {
+"bbox": 14.0
+},
+"uni8753": {
+"bbox": 13.0
+},
+"uni8755": {
+"bbox": 15.0
+},
+"uni8768": {
+"bbox": 15.0
+},
+"uni8771": {
+"bbox": 14.0
+},
+"uni878D": {
+"bbox": 16.0
+},
+"uni879F": {
+"bbox": 14.0
+},
+"uni87AB": {
+"bbox": 14.0
+},
+"uni87AF": {
+"bbox": 14.0
+},
+"uni87BD": {
+"bbox": 15.0
+},
+"uni87C0": {
+"bbox": 13.0
+},
+"uni87C4": {
+"bbox": 14.0
+},
+"uni87F2": {
+"bbox": 14.0
+},
+"uni8821": {
+"bbox": 14.0
+},
+"uni8822": {
+"bbox": 14.0
+},
+"uni8827": {
+"bbox": 15.0
+},
+"uni8836": {
+"bbox": 15.0
+},
+"uni8839": {
+"bbox": 14.0
+},
+"uni88AA": {
+"bbox": 15.0
+},
+"uni88DF": {
+"bbox": 13.0
+},
+"uni8941": {
+"bbox": 15.0
+},
+"uni896D": {
+"bbox": 13.0
+},
+"uni89E6": {
+"bbox": 16.0
+},
+"uni8A1F": {
+"bbox": 15.0
+},
+"uni8AA4": {
+"bbox": 13.0
+},
+"uni8B59": {
+"bbox": 17.0
+},
+"uni8B8C": {
+"bbox": 14.0
+},
+"uni8C48": {
+"bbox": 13.0
+},
+"uni8CF4": {
+"bbox": 14.0
+},
+"uni8E30": {
+"bbox": 15.0
+},
+"uni8E48": {
+"bbox": 13.0
+},
+"uni8EE2": {
+"bbox": 16.0
+},
+"uni8F57": {
+"bbox": 13.0
+},
+"uni903E": {
+"bbox": 13.0
+},
+"uni91BA": {
+"bbox": 15.0
+},
+"uni91BC": {
+"bbox": 16.0
+},
+"uni9249": {
+"bbox": 13.0
+},
+"uni9271": {
+"bbox": 17.0
+},
+"uni92F2": {
+"bbox": 15.0
+},
+"uni936E": {
+"bbox": 16.0
+},
+"uni9396": {
+"bbox": 13.0
+},
+"uni9463": {
+"bbox": 17.0
+},
+"uni2ED2": {
+"bbox": 14.0
+},
+"uni9670": {
+"bbox": 13.0
+},
+"uni96A0": {
+"bbox": 13.0
+},
+"uni96AA": {
+"bbox": 13.0
+},
+"uni96B0": {
+"bbox": 14.0
+},
+"uni96F2": {
+"bbox": 14.0
+},
+"uni97DC": {
+"bbox": 13.0
+},
+"uni9802": {
+"bbox": 13.0
+},
+"uni9803": {
+"bbox": 13.0
+},
+"uni9805": {
+"bbox": 13.0
+},
+"uni9806": {
+"bbox": 13.0
+},
+"uni9808": {
+"bbox": 13.0
+},
+"uni980A": {
+"bbox": 14.0
+},
+"uni980C": {
+"bbox": 13.0
+},
+"uni980F": {
+"bbox": 14.0
+},
+"uni9810": {
+"bbox": 14.0
+},
+"uni9811": {
+"bbox": 14.0
+},
+"uni9812": {
+"bbox": 14.0
+},
+"uni9813": {
+"bbox": 13.0
+},
+"uni9817": {
+"bbox": 14.0
+},
+"uni981A": {
+"bbox": 13.0
+},
+"uni981E": {
+"bbox": 13.0
+},
+"uni9821": {
+"bbox": 13.0
+},
+"uni9824": {
+"bbox": 13.0
+},
+"uni982B": {
+"bbox": 13.0
+},
+"uni982C": {
+"bbox": 13.0
+},
+"uni982D": {
+"bbox": 13.0
+},
+"uni9830": {
+"bbox": 13.0
+},
+"uni9834": {
+"bbox": 14.0
+},
+"uni9837": {
+"bbox": 14.0
+},
+"uni9838": {
+"bbox": 14.0
+},
+"uni983B": {
+"bbox": 14.0
+},
+"uni983C": {
+"bbox": 14.0
+},
+"uni983D": {
+"bbox": 14.0
+},
+"uni9846": {
+"bbox": 14.0
+},
+"uni984B": {
+"bbox": 13.0
+},
+"uni984D": {
+"bbox": 14.0
+},
+"uni984E": {
+"bbox": 13.0
+},
+"uni984F": {
+"bbox": 14.0
+},
+"uni9852": {
+"bbox": 13.0
+},
+"uni9853": {
+"bbox": 13.0
+},
+"uni9854": {
+"bbox": 14.0
+},
+"uni9855": {
+"bbox": 13.0
+},
+"uni9856": {
+"bbox": 13.0
+},
+"uni9857": {
+"bbox": 14.0
+},
+"uni9858": {
+"bbox": 14.0
+},
+"uni9859": {
+"bbox": 14.0
+},
+"uni985A": {
+"bbox": 13.0
+},
+"uni985B": {
+"bbox": 14.0
+},
+"uni985E": {
+"bbox": 13.0
+},
+"uni9865": {
+"bbox": 14.0
+},
+"uni9867": {
+"bbox": 13.0
+},
+"uni986B": {
+"bbox": 13.0
+},
+"uni986C": {
+"bbox": 13.0
+},
+"uni9871": {
+"bbox": 14.0
+},
+"uni9873": {
+"bbox": 14.0
+},
+"uni9874": {
+"bbox": 13.0
+},
+"uni98AA": {
+"bbox": 14.0
+},
+"uni2EDF": {
+"bbox": 15.0
+},
+"uni99ED": {
+"bbox": 13.0
+},
+"uni99FF": {
+"bbox": 13.0
+},
+"uni9A12": {
+"bbox": 16.0
+},
+"uni9A2B": {
+"bbox": 13.0
+},
+"uni9A2D": {
+"bbox": 14.0
+},
+"uni9A37": {
+"bbox": 16.0
+},
+"uni9A40": {
+"bbox": 13.0
+},
+"uni9A5A": {
+"bbox": 13.0
+},
+"uni9B06": {
+"bbox": 14.0
+},
+"uni9B5A": {
+"bbox": 14.0
+},
+"uni9BF2": {
+"bbox": 14.0
+},
+"uni9CF6": {
+"bbox": 13.0
+},
+"uni9D1B": {
+"bbox": 13.0
+},
+"uni9D26": {
+"bbox": 13.0
+},
+"uni9D2C": {
+"bbox": 13.0
+},
+"uni9D5E": {
+"bbox": 13.0
+},
+"uni9D96": {
+"bbox": 13.0
+},
+"uni9DA9": {
+"bbox": 13.0
+},
+"uni9DAF": {
+"bbox": 13.0
+},
+"uni9DD9": {
+"bbox": 13.0
+},
+"uni9DF2": {
+"bbox": 13.0
+},
+"uni9DFA": {
+"bbox": 13.0
+},
+"uni9DFD": {
+"bbox": 13.0
+},
+"uni9E1E": {
+"bbox": 13.0
+},
+"uni9E92": {
+"bbox": 13.0
+},
+"uni9EBC": {
+"bbox": 15.0
+},
+"uni9ED1": {
+"bbox": 15.0
+},
+"uni9ED2": {
+"bbox": 15.0
+},
+"uni9ED9": {
+"bbox": 15.0
+},
+"uni9EDB": {
+"bbox": 14.0
+},
+"uni9EE8": {
+"bbox": 14.0
+},
+"uniF9D0": {
+"bbox": 13.0
+},
+"uniFA15": {
+"bbox": 15.0
+},
+"uniFA40": {
+"bbox": 14.0
+},
+"uniFA48": {
+"bbox": 15.0
+},
+"uniFA53": {
+"bbox": 13.0
+},
+"uniFA6A": {
+"bbox": 14.0
+},
+"uniFF01": {
+"xor": 0.088,
+"area": 0.088
+},
+"uniFF02": {
+"xor": 0.152,
+"area": 0.152
+},
+"uniFF03": {
+"xor": 0.158,
+"area": 0.156
+},
+"uniFF04": {
+"xor": 0.151,
+"area": 0.15
+},
+"uniFF05": {
+"xor": 0.143,
+"area": 0.143
+},
+"uniFF06": {
+"xor": 0.149,
+"area": 0.149
+},
+"uniFF07": {
+"xor": 0.171,
+"area": 0.171
+},
+"uniFF08": {
+"xor": 0.116,
+"area": 0.116
+},
+"uniFF09": {
+"xor": 0.134,
+"area": 0.134
+},
+"uniFF0A": {
+"xor": 0.12,
+"area": 0.12
+},
+"uniFF0B": {
+"xor": 0.253,
+"area": 0.253
+},
+"uniFF0C": {
+"xor": 0.157,
+"area": 0.157
+},
+"uniFF0D": {
+"xor": 0.386,
+"area": 0.386
+},
+"uniFF0E": {
+"xor": 0.084,
+"area": 0.084
+},
+"uni2215": {
+"xor": 0.127,
+"area": 0.121
+},
+"uniFF10": {
+"xor": 0.113,
+"area": 0.113
+},
+"uniFF12": {
+"xor": 0.121,
+"area": 0.121
+},
+"uniFF13": {
+"xor": 0.116,
+"area": 0.116
+},
+"uniFF14": {
+"xor": 0.193,
+"area": 0.193
+},
+"uniFF15": {
+"xor": 0.119,
+"area": 0.119
+},
+"uniFF16": {
+"xor": 0.109,
+"area": 0.109
+},
+"uniFF17": {
+"xor": 0.125,
+"area": 0.125
+},
+"uniFF18": {
+"xor": 0.131,
+"area": 0.131
+},
+"uniFF19": {
+"xor": 0.114,
+"area": 0.114
+},
+"uniFF1A": {
+"xor": 0.115,
+"area": 0.115
+},
+"uniFF1B": {
+"xor": 0.099,
+"area": 0.099
+},
+"uniFF1C": {
+"xor": 0.136,
+"area": 0.136
+},
+"uniFF1D": {
+"xor": 0.093,
+"area": 0.083
+},
+"uniFF1E": {
+"xor": 0.128,
+"area": 0.128
+},
+"uniFF1F": {
+"xor": 0.134,
+"area": 0.134
+},
+"uniFF20": {
+"xor": 0.13,
+"area": 0.13
+},
+"uniFF21": {
+"xor": 0.098,
+"area": 0.098
+},
+"uniFF22": {
+"area": 0.069
+},
+"uniFF23": {
+"xor": 0.122,
+"area": 0.122
+},
+"uniFF24": {
+"area": 0.067
+},
+"uniFF25": {
+"xor": 0.091,
+"area": 0.091
+},
+"uniFF26": {
+"xor": 0.168,
+"area": 0.168
+},
+"uniFF27": {
+"xor": 0.12,
+"area": 0.12
+},
+"uniFF28": {
+"xor": 0.171,
+"area": 0.171
+},
+"uniFF2A": {
+"xor": 0.213,
+"area": 0.213
+},
+"uniFF2B": {
+"xor": 0.088,
+"area": 0.088
+},
+"uniFF2C": {
+"area": 0.079
+},
+"uniFF2D": {
+"xor": 0.119,
+"area": 0.119
+},
+"uniFF2E": {
+"xor": 0.164,
+"area": 0.164
+},
+"uniFF2F": {
+"xor": 0.121,
+"area": 0.121
+},
+"uniFF30": {
+"xor": 0.172,
+"area": 0.172
+},
+"uniFF31": {
+"xor": 0.127,
+"area": 0.127
+},
+"uniFF32": {
+"xor": 0.15,
+"area": 0.15
+},
+"uniFF33": {
+"xor": 0.126,
+"area": 0.126
+},
+"uniFF34": {
+"area": 0.072
+},
+"uniFF35": {
+"xor": 0.146,
+"area": 0.146
+},
+"uniFF36": {
+"xor": 0.124,
+"area": 0.124
+},
+"uniFF37": {
+"xor": 0.112,
+"area": 0.112
+},
+"uniFF38": {
+"xor": 0.133,
+"area": 0.133
+},
+"uniFF39": {
+"xor": 0.099,
+"area": 0.099
+},
+"uniFF3A": {
+"xor": 0.139,
+"area": 0.139
+},
+"uniFF3B": {
+"area": 0.068
+},
+"uniFF3C": {
+"xor": 0.131,
+"area": 0.124
+},
+"uniFF3D": {
+"xor": 0.165,
+"area": 0.163
+},
+"uniFF3E": {
+"xor": 0.109,
+"area": 0.109
+},
+"uni2035": {
+"xor": 0.171,
+"area": 0.171
+},
+"uniFF41": {
+"xor": 0.116,
+"area": 0.116
+},
+"uniFF42": {
+"xor": 0.123,
+"area": 0.123
+},
+"uniFF43": {
+"xor": 0.131,
+"area": 0.131
+},
+"uniFF44": {
+"xor": 0.145,
+"area": 0.145
+},
+"uniFF45": {
+"xor": 0.092,
+"area": 0.092
+},
+"uniFF46": {
+"xor": 0.156,
+"area": 0.156
+},
+"uniFF47": {
+"xor": 0.128,
+"area": 0.128
+},
+"uniFF48": {
+"xor": 0.124,
+"area": 0.124
+},
+"uniFF4A": {
+"xor": 0.123,
+"area": 0.123
+},
+"uniFF4F": {
+"xor": 0.126,
+"area": 0.126
+},
+"uniFF50": {
+"xor": 0.136,
+"area": 0.136
+},
+"uniFF51": {
+"xor": 0.12,
+"area": 0.12
+},
+"uniFF52": {
+"xor": 0.117,
+"area": 0.117
+},
+"uniFF53": {
+"xor": 0.129,
+"area": 0.129
+},
+"uniFF54": {
+"xor": 0.159,
+"area": 0.159
+},
+"uniFF55": {
+"xor": 0.099,
+"area": 0.099
+},
+"uniFF56": {
+"xor": 0.13,
+"area": 0.13
+},
+"uniFF57": {
+"xor": 0.126,
+"area": 0.126
+},
+"uniFF58": {
+"xor": 0.146,
+"area": 0.146
+},
+"uniFF59": {
+"xor": 0.121,
+"area": 0.121
+},
+"uniFF5A": {
+"xor": 0.127,
+"area": 0.127
+},
+"uniFF5B": {
+"xor": 0.116,
+"area": 0.116
+},
+"uniFF5D": {
+"area": 0.063
+},
+"uni2EDE": {
+"bbox": 13.0
+},
+"Hbar": {
+"xor": 0.141,
+"area": 0.139
+},
+"hbar": {
+"xor": 0.153,
+"area": 0.153
+},
+"IJ": {
+"xor": 0.123,
+"area": 0.119
+},
+"ij": {
+"xor": 0.145,
+"area": 0.145
+},
+"kgreenlandic": {
+"xor": 0.14,
+"area": 0.14
+},
+"Ldot": {
+"xor": 0.139,
+"area": 0.139
+},
+"ldot": {
+"xor": 0.127,
+"area": 0.125
+},
+"Lslash": {
+"xor": 0.145,
+"area": 0.145
+},
+"lslash": {
+"xor": 0.136,
+"area": 0.131
+},
+"Eng": {
+"xor": 0.167,
+"area": 0.167
+},
+"eng": {
+"xor": 0.186,
+"area": 0.186
+},
+"Tbar": {
+"xor": 0.09,
+"area": 0.09
+},
+"tbar": {
+"xor": 0.166,
+"area": 0.163
+},
+"quotereversed": {
+"xor": 0.116,
+"area": 0.116
+},
+"uni201F": {
+"xor": 0.104,
+"area": 0.104
+},
+"uni2034": {
+"xor": 0.142,
+"area": 0.138
+},
+"uni2036": {
+"xor": 0.124,
+"area": 0.124
+}
+}

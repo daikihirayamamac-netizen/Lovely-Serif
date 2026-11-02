@@ -17,7 +17,7 @@ TEMPLATE_PATH = os.path.join(ROOT, "preview", "template.html")
 def artifact_variant(html: str) -> str:
     """Strip the document skeleton (the Artifact host adds its own) and adapt the page contract."""
     import re
-    head_end = html.index("<link rel=\"preload\"")
+    head_end = html.index("<link rel=\"preconnect\"")
     html = "<title>Lovely Serif Preview</title>\n<meta name=\"claude:viewport-fit-sides\" content=\"cover\">\n" + html[head_end:]
     html = html.replace("</head>\n<body>\n", "").replace("\n</body>\n</html>", "")
     html = html.replace(".wrap{max-width:1100px;margin:0 auto;padding:0 16px}",

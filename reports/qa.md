@@ -1,0 +1,415 @@
+# Outline QA
+
+Glyphs checked: 10374 · flagged: 770
+
+| check | glyphs |
+|---|---|
+| pathops_fail | 0 |
+| emptied | 0 |
+| self_intersect | 0 |
+| direction | 0 |
+| degenerate | 0 |
+| xor | 297 |
+| area | 308 |
+| bbox | 462 |
+
+- `uniFF0D` － — {"xor": 0.386, "area": 0.386}
+- `hyphen` -­‑ — {"xor": 0.382, "area": 0.382}
+- `uniFF0B` ＋ — {"xor": 0.253, "area": 0.253}
+- `trademark` ™ — {"xor": 0.22, "area": 0.165}
+- `uniFF2A` Ｊ — {"xor": 0.213, "area": 0.213}
+- `logicalnot` ¬ — {"xor": 0.195, "area": 0.195}
+- `four` 4 — {"xor": 0.194, "area": 0.19}
+- `uniFF14` ４ — {"xor": 0.193, "area": 0.193}
+- `amacron` ā — {"xor": 0.186, "area": 0.186}
+- `eng` ŋ — {"xor": 0.186, "area": 0.186}
+- `U` U — {"xor": 0.184, "area": 0.11}
+- `Utilde` Ũ — {"xor": 0.183, "area": 0.122}
+- `Uacute` Ú — {"xor": 0.179, "area": 0.114}
+- `Ucircumflex` Û — {"xor": 0.178, "area": 0.115}
+- `guilsinglleft` ‹ — {"xor": 0.178, "area": 0.173}
+- `plus` + — {"xor": 0.177, "area": 0.177}
+- `Ugrave` Ù — {"xor": 0.177, "area": 0.111}
+- `Ubreve` Ŭ — {"xor": 0.177, "area": 0.114}
+- `registered` ® — {"xor": 0.175, "area": 0.172}
+- `uniFF30` Ｐ — {"xor": 0.172, "area": 0.172}
+- `guilsinglright` › — {"xor": 0.171, "area": 0.171}
+- `uniFF07` ＇ — {"xor": 0.171, "area": 0.171}
+- `uniFF28` Ｈ — {"xor": 0.171, "area": 0.171}
+- `uni2035` ｀ — {"xor": 0.171, "area": 0.171}
+- `bracketleft` [ — {"xor": 0.17, "area": 0.168}
+- `Udieresis` Ü — {"xor": 0.169, "area": 0.107}
+- `u` u — {"xor": 0.168, "area": 0.168}
+- `uniFF26` Ｆ — {"xor": 0.168, "area": 0.168}
+- `nacute` ń — {"xor": 0.167, "area": 0.165}
+- `Eng` Ŋ — {"xor": 0.167, "area": 0.167}
+- `r` r — {"xor": 0.166, "area": 0.166}
+- `tbar` ŧ — {"xor": 0.166, "area": 0.163}
+- `ucircumflex` û — {"xor": 0.165, "area": 0.165}
+- `uniFF3D` ］ — {"xor": 0.165, "area": 0.163}
+- `quotesingle` ' — {"xor": 0.164, "area": 0.164}
+- `mu` µ — {"xor": 0.164, "area": 0.164}
+- `ntilde` ñ — {"xor": 0.164, "area": 0.163}
+- `ubreve` ŭ — {"xor": 0.164, "area": 0.164}
+- `uniFF2E` Ｎ — {"xor": 0.164, "area": 0.164}
+- `guillemotleft` « — {"xor": 0.163, "area": 0.158}
+- `utilde` ũ — {"xor": 0.163, "area": 0.161}
+- `ugrave` ù — {"xor": 0.162, "area": 0.162}
+- `uacute` ú — {"xor": 0.162, "area": 0.162}
+- `ncaron` ň — {"xor": 0.162, "area": 0.161}
+- `emacron` ē — {"xor": 0.161, "area": 0.161}
+- `N` N — {"xor": 0.16, "area": 0.16}
+- `t` t — {"xor": 0.16, "area": 0.16}
+- `Ncaron` Ň — {"xor": 0.16, "area": 0.16}
+- `omacron` ō — {"xor": 0.16, "area": 0.16}
+- `Umacron` Ū — {"xor": 0.16, "area": 0.097}
+- `numbersign` # — {"xor": 0.159, "area": 0.152}
+- `copyright` © — {"xor": 0.159, "area": 0.158}
+- `uniFF54` ｔ — {"xor": 0.159, "area": 0.159}
+- `Nacute` Ń — {"xor": 0.158, "area": 0.158}
+- `uniFF03` ＃ — {"xor": 0.158, "area": 0.156}
+- `braceleft` { — {"xor": 0.157, "area": 0.157}
+- `uni00B9` ¹ — {"xor": 0.157, "area": 0.157}
+- `Ntilde` Ñ — {"xor": 0.157, "area": 0.157}
+- `uniFF0C` ， — {"xor": 0.157, "area": 0.157}
+- `braceright` } — {"xor": 0.156, "area": 0.156}
+- `guillemotright` » — {"xor": 0.156, "area": 0.152}
+- `uniFF46` ｆ — {"xor": 0.156, "area": 0.156}
+- `iacute` í — {"xor": 0.155, "area": 0.155}
+- `dollar` $ — {"xor": 0.154, "area": 0.152}
+- `itilde` ĩ — {"xor": 0.154, "area": 0.154}
+- `h` h — {"xor": 0.153, "area": 0.151}
+- `currency` ¤ — {"xor": 0.153, "area": 0.152}
+- `uni2042` ⁂ — {"xor": 0.153, "area": 0.152}
+- `hbar` ħ — {"xor": 0.153, "area": 0.153}
+- `aring` å — {"xor": 0.152, "area": 0.15}
+- `igrave` ì — {"xor": 0.152, "area": 0.152}
+- `uniFF02` ＂ — {"xor": 0.152, "area": 0.152}
+- `udieresis` ü — {"xor": 0.151, "area": 0.151}
+- `uniFF04` ＄ — {"xor": 0.151, "area": 0.15}
+- `L` L — {"xor": 0.15, "area": 0.15}
+- `uniFF32` Ｒ — {"xor": 0.15, "area": 0.15}
+- `uniFF06` ＆ — {"xor": 0.149, "area": 0.149}
+- `quotedbl` " — {"xor": 0.147, "area": 0.147}
+- `greater` > — {"xor": 0.147, "area": 0.141}
+- `ampersand` & — {"xor": 0.146, "area": 0.145}
+- `a` a — {"xor": 0.146, "area": 0.146}
+- `uniFF35` Ｕ — {"xor": 0.146, "area": 0.146}
+- `uniFF58` ｘ — {"xor": 0.146, "area": 0.146}
+- `abreve` ă — {"xor": 0.145, "area": 0.145}
+- `uniFF44` ｄ — {"xor": 0.145, "area": 0.145}
+- `ij` ĳ — {"xor": 0.145, "area": 0.145}
+- `Lslash` Ł — {"xor": 0.145, "area": 0.145}
+- `threequarters` ¾ — {"xor": 0.144, "area": 0.141}
+- `umacron` ū — {"xor": 0.144, "area": 0.144}
+- `cent` ¢ — {"xor": 0.143, "area": 0.139}
+- `uni301C` ～ — {"xor": 0.143, "area": 0.143}
+- `uniFF05` ％ — {"xor": 0.143, "area": 0.143}
+- `agrave` à — {"xor": 0.142, "area": 0.142}
+- `aacute` á — {"xor": 0.142, "area": 0.142}
+- `Ecaron` Ě — {"xor": 0.142, "area": 0.139}
+- `uni2034` ‴ — {"xor": 0.142, "area": 0.138}
+- `R` R — {"xor": 0.141, "area": 0.141}
+- `j` j — {"xor": 0.141, "area": 0.141}
+- `x` x — {"xor": 0.141, "area": 0.139}
+- `Eacute` É — {"xor": 0.141, "area": 0.137}
+- `acircumflex` â — {"xor": 0.141, "area": 0.141}
+- `atilde` ã — {"xor": 0.141, "area": 0.141}
+- `Hbar` Ħ — {"xor": 0.141, "area": 0.139}
+- `Z` Z — {"xor": 0.14, "area": 0.14}
+- `ccedilla` ç — {"xor": 0.14, "area": 0.137}
+- `icircumflex` î — {"xor": 0.14, "area": 0.14}
+- `kgreenlandic` ĸ — {"xor": 0.14, "area": 0.14}
+- `less` < — {"xor": 0.139, "area": 0.139}
+- `adieresis` ä — {"xor": 0.139, "area": 0.137}
+- `uniFF3A` Ｚ — {"xor": 0.139, "area": 0.139}
+- `Ldot` Ŀ — {"xor": 0.139, "area": 0.139}
+- `E` E — {"xor": 0.138, "area": 0.135}
+- `H` H — {"xor": 0.138, "area": 0.136}
+- `asciitilde` ~ — {"xor": 0.138, "area": 0.133}
+- `Ecircumflex` Ê — {"xor": 0.138, "area": 0.136}
+- `grave` ` — {"xor": 0.137, "area": 0.137}
+- `AE` Æ — {"xor": 0.137, "area": 0.136}
+- `OE` Œ — {"xor": 0.136, "area": 0.136}
+- `Euro` € — {"xor": 0.136, "area": 0.136}
+- `uniFF1C` ＜ — {"xor": 0.136, "area": 0.136}
+- `uniFF50` ｐ — {"xor": 0.136, "area": 0.136}
+- `lslash` ł — {"xor": 0.136, "area": 0.131}
+- `s` s — {"xor": 0.135, "area": 0.132}
+- `Ccedilla` Ç — {"xor": 0.135, "area": 0.132}
+- `idieresis` ï — {"xor": 0.135, "area": 0.135}
+- `percent` % — {"xor": 0.134, "area": 0.133}
+- `seven` 7 — {"xor": 0.134, "area": 0.134}
+- `question` ? — {"xor": 0.134, "area": 0.134}
+- `Egrave` È — {"xor": 0.134, "area": 0.132}
+- `thorn` þ — {"xor": 0.134, "area": 0.131}
+- `uniFF09` ） — {"xor": 0.134, "area": 0.134}
+- `uniFF1F` ？ — {"xor": 0.134, "area": 0.134}
+- `b` b — {"xor": 0.133, "area": 0.13}
+- `uniFF38` Ｘ — {"xor": 0.133, "area": 0.133}
+- `at` @ — {"xor": 0.132, "area": 0.131}
+- `C` C — {"xor": 0.131, "area": 0.131}
+- `y` y — {"xor": 0.131, "area": 0.131}
+- `yacute` ý — {"xor": 0.131, "area": 0.131}
+- `quotesinglbase` ‚ — {"xor": 0.131, "area": 0.131}
+- `uniFF18` ８ — {"xor": 0.131, "area": 0.131}
+- `uniFF3C` ＼ — {"xor": 0.131, "area": 0.124}
+- `uniFF43` ｃ — {"xor": 0.131, "area": 0.131}
+- `K` K — {"xor": 0.13, "area": 0.126}
+- `questiondown` ¿ — {"xor": 0.13, "area": 0.128}
+- `Edieresis` Ë — {"xor": 0.13, "area": 0.128}
+- `uniFF20` ＠ — {"xor": 0.13, "area": 0.13}
+- `uniFF56` ｖ — {"xor": 0.13, "area": 0.13}
+- `p` p — {"xor": 0.129, "area": 0.129}
+- `uni20A9` ₩ — {"xor": 0.129, "area": 0.122}
+- `uniFF53` ｓ — {"xor": 0.129, "area": 0.129}
+- `asterisk` * — {"xor": 0.128, "area": 0.128}
+- `J` J — {"xor": 0.128, "area": 0.121}
+- `asciicircum` ^ — {"xor": 0.128, "area": 0.123}
+- `uni00B3` ³ — {"xor": 0.128, "area": 0.128}
+- `quotedblbase` „ — {"xor": 0.128, "area": 0.128}
+- `uniFF1E` ＞ — {"xor": 0.128, "area": 0.128}
+- `uniFF47` ｇ — {"xor": 0.128, "area": 0.128}
+- `X` X — {"xor": 0.127, "area": 0.127}
+- `c` c — {"xor": 0.127, "area": 0.127}
+- `uni2215` ／ — {"xor": 0.127, "area": 0.121}
+- `uniFF31` Ｑ — {"xor": 0.127, "area": 0.127}
+- `uniFF5A` ｚ — {"xor": 0.127, "area": 0.127}
+- `ldot` ŀ — {"xor": 0.127, "area": 0.125}
+- `comma` , — {"xor": 0.126, "area": 0.126}
+- `five` 5 — {"xor": 0.126, "area": 0.126}
+- `sterling` £ — {"xor": 0.126, "area": 0.125}
+- `uniFF33` Ｓ — {"xor": 0.126, "area": 0.126}
+- `uniFF4F` ｏ — {"xor": 0.126, "area": 0.126}
+- `uniFF57` ｗ — {"xor": 0.126, "area": 0.126}
+- `q` q — {"xor": 0.125, "area": 0.125}
+- `v` v — {"xor": 0.125, "area": 0.125}
+- `w` w — {"xor": 0.125, "area": 0.118}
+- `Itilde` Ĩ — {"xor": 0.125, "area": 0.12}
+- `uniFF17` ７ — {"xor": 0.125, "area": 0.125}
+- `V` V — {"xor": 0.124, "area": 0.124}
+- `Otilde` Õ — {"xor": 0.124, "area": 0.123}
+- `uniFF36` Ｖ — {"xor": 0.124, "area": 0.124}
+- `uniFF48` ｈ — {"xor": 0.124, "area": 0.124}
+- `uni2036` ‶ — {"xor": 0.124, "area": 0.124}
+- `Q` Q — {"xor": 0.123, "area": 0.123}
+- `Icircumflex` Î — {"xor": 0.123, "area": 0.119}
+- `Ocircumflex` Ô — {"xor": 0.123, "area": 0.123}
+- `Obreve` Ŏ — {"xor": 0.123, "area": 0.123}
+- `obreve` ŏ — {"xor": 0.123, "area": 0.123}
+- `exclamdbl` ‼ — {"xor": 0.123, "area": 0.123}
+- `uniFF42` ｂ — {"xor": 0.123, "area": 0.123}
+- `uniFF4A` ｊ — {"xor": 0.123, "area": 0.123}
+- `IJ` Ĳ — {"xor": 0.123, "area": 0.119}
+- `F` F — {"xor": 0.122, "area": 0.122}
+- `S` S — {"xor": 0.122, "area": 0.122}
+- `z` z — {"xor": 0.122, "area": 0.119}
+- `Thorn` Þ — {"xor": 0.122, "area": 0.118}
+- `otilde` õ — {"xor": 0.122, "area": 0.122}
+- `ydieresis` ÿ — {"xor": 0.122, "area": 0.122}
+- `Emacron` Ē — {"xor": 0.122, "area": 0.12}
+- `uniFF23` Ｃ — {"xor": 0.122, "area": 0.122}
+- `two` 2 — {"xor": 0.121, "area": 0.121}
+- `eight` 8 — {"xor": 0.121, "area": 0.12}
+- `backslash` \ — {"xor": 0.121, "area": 0.117}
+- `ordfeminine` ª — {"xor": 0.121, "area": 0.072}
+- `Ograve` Ò — {"xor": 0.121, "area": 0.121}
+- `ograve` ò — {"xor": 0.121, "area": 0.121}
+- `uniFF12` ２ — {"xor": 0.121, "area": 0.121}
+- `uniFF2F` Ｏ — {"xor": 0.121, "area": 0.121}
+- `uniFF59` ｙ — {"xor": 0.121, "area": 0.121}
+- `O` O — {"xor": 0.12, "area": 0.12}
+- `W` W — {"xor": 0.12, "area": 0.112}
+- `Oacute` Ó — {"xor": 0.12, "area": 0.12}
+- `ocircumflex` ô — {"xor": 0.12, "area": 0.12}
+- `uniFF0A` ＊ — {"xor": 0.12, "area": 0.12}
+- `uniFF27` Ｇ — {"xor": 0.12, "area": 0.12}
+- `uniFF51` ｑ — {"xor": 0.12, "area": 0.12}
+- `slash` / — {"xor": 0.119, "area": 0.115}
+- `Igrave` Ì — {"xor": 0.119, "area": 0.115}
+- `uniFF15` ５ — {"xor": 0.119, "area": 0.119}
+- `uniFF2D` Ｍ — {"xor": 0.119, "area": 0.119}
+- `parenright` ) — {"xor": 0.118, "area": 0.112}
+- `three` 3 — {"xor": 0.118, "area": 0.118}
+- `six` 6 — {"xor": 0.118, "area": 0.116}
+- `g` g — {"xor": 0.118, "area": 0.118}
+- `o` o — {"xor": 0.118, "area": 0.118}
+- `Iacute` Í — {"xor": 0.118, "area": 0.114}
+- `ae` æ — {"xor": 0.118, "area": 0.118}
+- `oacute` ó — {"xor": 0.118, "area": 0.118}
+- `oe` œ — {"xor": 0.118, "area": 0.118}
+- `I` I — {"xor": 0.117, "area": 0.112}
+- `P` P — {"xor": 0.117, "area": 0.116}
+- `Aring` Å — {"xor": 0.117, "area": 0.117}
+- `Idieresis` Ï — {"xor": 0.117, "area": 0.112}
+- `ecircumflex` ê — {"xor": 0.117, "area": 0.116}
+- `ecaron` ě — {"xor": 0.117, "area": 0.117}
+- `uniFF52` ｒ — {"xor": 0.117, "area": 0.117}
+- `Atilde` Ã — {"xor": 0.116, "area": 0.116}
+- `Odieresis` Ö — {"xor": 0.116, "area": 0.116}
+- `Abreve` Ă — {"xor": 0.116, "area": 0.116}
+- `uniFF08` （ — {"xor": 0.116, "area": 0.116}
+- `uniFF13` ３ — {"xor": 0.116, "area": 0.116}
+- `uniFF41` ａ — {"xor": 0.116, "area": 0.116}
+- `uniFF5B` ｛ — {"xor": 0.116, "area": 0.116}
+- `quotereversed` ‛ — {"xor": 0.116, "area": 0.116}
+- `exclam` ! — {"xor": 0.115, "area": 0.112}
+- `egrave` è — {"xor": 0.115, "area": 0.115}
+- `eacute` é — {"xor": 0.115, "area": 0.115}
+- `imacron` ī — {"xor": 0.115, "area": 0.109}
+- `uniFF1A` ： — {"xor": 0.115, "area": 0.115}
+- `B` B — {"xor": 0.114, "area": 0.114}
+- `ordmasculine` º — {"xor": 0.114, "area": 0.114}
+- `eth` ð — {"xor": 0.114, "area": 0.113}
+- `oslash` ø — {"xor": 0.114, "area": 0.111}
+- `uniFF19` ９ — {"xor": 0.114, "area": 0.114}
+- `e` e — {"xor": 0.113, "area": 0.113}
+- `Agrave` À — {"xor": 0.113, "area": 0.113}
+- `Aacute` Á — {"xor": 0.113, "area": 0.113}
+- `odieresis` ö — {"xor": 0.113, "area": 0.113}
+- `uniFF10` ０ — {"xor": 0.113, "area": 0.113}
+- `exclamdown` ¡ — {"xor": 0.112, "area": 0.112}
+- `Oslash` Ø — {"xor": 0.112, "area": 0.111}
+- `uniFF37` Ｗ — {"xor": 0.112, "area": 0.112}
+- `period` . — {"xor": 0.111, "area": 0.111}
+- `A` A — {"xor": 0.111, "area": 0.111}
+- `M` M — {"xor": 0.111, "area": 0.108}
+- `Acircumflex` Â — {"xor": 0.111, "area": 0.111}
+- `parenleft` ( — {"xor": 0.11, "area": 0.104}
+- `G` G — {"xor": 0.11, "area": 0.11}
+- `Adieresis` Ä — {"xor": 0.11, "area": 0.11}
+- `onehalf` ½ — {"xor": 0.109, "area": 0.109}
+- `uniFF16` ６ — {"xor": 0.109, "area": 0.109}
+- `uniFF3E` ＾ — {"xor": 0.109, "area": 0.109}
+- `nine` 9 — {"xor": 0.108, "area": 0.108}
+- `Omacron` Ō — {"xor": 0.108, "area": 0.108}
+- `zero` 0 — {"xor": 0.107, "area": 0.105}
+- `colon` : — {"xor": 0.107, "area": 0.107}
+- `yen` ¥ — {"xor": 0.107, "area": 0.107}
+- `germandbls` ß — {"xor": 0.107, "area": 0.107}
+- `edieresis` ë — {"xor": 0.107, "area": 0.107}
+- `f` f — {"xor": 0.105, "area": 0.105}
+- `Yacute` Ý — {"xor": 0.104, "area": 0.104}
+- `uni201F` ‟ — {"xor": 0.104, "area": 0.104}
+- `Y` Y — {"xor": 0.102, "area": 0.102}
+- `uni00B2` ² — {"xor": 0.099, "area": 0.099}
+- `uniFF1B` ； — {"xor": 0.099, "area": 0.099}
+- `uniFF39` Ｙ — {"xor": 0.099, "area": 0.099}
+- `uniFF55` ｕ — {"xor": 0.099, "area": 0.099}
+- `uniFF21` Ａ — {"xor": 0.098, "area": 0.098}
+- `Amacron` Ā — {"xor": 0.095, "area": 0.093}
+- `equal` = — {"xor": 0.094, "area": 0.084}
+- `semicolon` ; — {"xor": 0.093, "area": 0.093}
+- `Imacron` Ī — {"xor": 0.093, "area": 0.087}
+- `uniFF1D` ＝ — {"xor": 0.093, "area": 0.083}
+- `uniFF45` ｅ — {"xor": 0.092, "area": 0.092}
+- `uniFF25` Ｅ — {"xor": 0.091, "area": 0.091}
+- `onequarter` ¼ — {"xor": 0.09, "area": 0.09}
+- `Tbar` Ŧ — {"xor": 0.09, "area": 0.09}
+- `uniFF01` ！ — {"xor": 0.088, "area": 0.088}
+- `uniFF2B` Ｋ — {"xor": 0.088, "area": 0.088}
+- `uniFF0E` ． — {"xor": 0.084, "area": 0.084}
+- `dcroat` đ — {"xor": 0.083, "area": 0.08}
+- `D` D — {"area": 0.062}
+- `T` T — {"area": 0.07}
+- `bracketright` ] — {"area": 0.063}
+- `d` d — {"area": 0.066}
+- `Eth` Ð — {"area": 0.071}
+- `uni459D` 䖝 — {"bbox": 15.0}
+- `uni4E91` 云 — {"bbox": 16.0}
+- `uni4ECF` 仏 — {"bbox": 16.0}
+- `uni4F1A` 会 — {"bbox": 14.0}
+- `uni4F1D` 伝 — {"bbox": 14.0}
+- `uni4F49` 佉 — {"bbox": 14.0}
+- `uni4F9B` 供 — {"bbox": 13.0}
+- `uni4FF1` 俱 — {"bbox": 13.0}
+- `uni5074` 側 — {"bbox": 14.0}
+- `uni5078` 偸 — {"bbox": 15.0}
+- `uni50BE` 傾 — {"bbox": 13.0}
+- `uni516C` 公 — {"bbox": 14.0}
+- `uni516D` 六 — {"bbox": 15.0}
+- `uni51B6` 冶 — {"bbox": 13.0}
+- `uni51DE` 凞 — {"bbox": 15.0}
+- `uni5247` 則 — {"bbox": 15.0}
+- `uni528D` 劍 — {"bbox": 13.0}
+- `uni52F2` 勲 — {"bbox": 15.0}
+- `uni53B6` ⼛厶 — {"bbox": 16.0}
+- `uni53BB` 去 — {"bbox": 14.0}
+- `uni53EA` 只 — {"bbox": 13.0}
+- `uni53F0` 台 — {"bbox": 13.0}
+- `uni544D` 呍 — {"bbox": 16.0}
+- `uni545F` 呟 — {"bbox": 13.0}
+- `uni547F` 呿 — {"bbox": 13.0}
+- `uni54A5` 咥 — {"bbox": 13.0}
+- `uni54C4` 哄 — {"bbox": 15.0}
+- `uni5504` 唄 — {"bbox": 14.0}
+- `uni5539` 唹 — {"bbox": 15.0}
+- `uni55A9` 喩 — {"bbox": 13.0}
+- `uni55E4` 嗤 — {"bbox": 14.0}
+- `uni5638` 嘸 — {"bbox": 17.0}
+- `uni5678` 噸 — {"bbox": 14.0}
+- `uni56A5` 嚥 — {"bbox": 17.0}
+- `uni56AC` 嚬 — {"bbox": 14.0}
+- `uni56C8` 囈 — {"bbox": 14.0}
+- `uni5793` 垓 — {"bbox": 13.0}
+- `uni57A4` 垤 — {"bbox": 13.0}
+- `uni5809` 堉 — {"bbox": 13.0}
+- `uni58CE` 壎 — {"bbox": 15.0}
+- `uni5957` 套 — {"bbox": 13.0}
+- `uni5999` 妙 — {"bbox": 13.0}
+- `uni59D2` 姒 — {"bbox": 13.0}
+- `uni5A11` 娑 — {"bbox": 13.0}
+- `uni5A2F` 娯 — {"bbox": 15.0}
+- `uni5A7E` 婾 — {"bbox": 16.0}
+- `uni5B5A` 孚 — {"bbox": 14.0}
+- `uni5B69` 孩 — {"bbox": 13.0}
+- `uni5B75` 孵 — {"bbox": 13.0}
+- `uni5B8D` 宍 — {"bbox": 15.0}
+- `uni5B8F` 宏 — {"bbox": 16.0}
+- `uni5B93` 宓 — {"bbox": 13.0}
+- `uni5B97` 宗 — {"bbox": 13.0}
+- `uni5C0F` ⼩小 — {"bbox": 13.0}
+- `uni5CC5` 峅 — {"bbox": 13.0}
+- `uni5CD0` 峐 — {"bbox": 13.0}
+- `uni5D27` 崧 — {"bbox": 15.0}
+- `uni5D8C` 嶌 — {"bbox": 14.0}
+- `uni5DAE` 嶮 — {"bbox": 13.0}
+- `uni5DBC` 嶼 — {"bbox": 13.0}
+- `uni5DDB` ⼮巛 — {"bbox": 15.0}
+- `uni5DE1` 巡 — {"bbox": 13.0}
+- `uni5E4E` 幎 — {"bbox": 13.0}
+- `uni5E7A` ⺓⼳幺 — {"bbox": 15.0}
+- `uni5E83` 広 — {"bbox": 16.0}
+- `uni5EB6` 庶 — {"bbox": 17.0}
+- `uni5EC1` 廁 — {"bbox": 17.0}
+- `uni5EE1` 廡 — {"bbox": 17.0}
+- `uni5F18` 弘 — {"bbox": 19.0}
+- `uni5F26` 弦 — {"bbox": 17.0}
+- `uni5F27` 弧 — {"bbox": 16.0}
+- `uni5F37` 強 — {"bbox": 14.0}
+- `uni5FB3` 徳 — {"bbox": 13.0}
+- `uni5FC5` 必 — {"bbox": 13.0}
+- `uni5FCD` 忍 — {"bbox": 13.0}
+- `uni5FD7` 志 — {"bbox": 13.0}
+- `uni5FD8` 忘 — {"bbox": 13.0}
+- `uni5FDE` 忞 — {"bbox": 13.0}
+- `uni5FE0` 忠 — {"bbox": 13.0}
+- `uni5FE9` 忩 — {"bbox": 13.0}
+- `uni6012` 怒 — {"bbox": 13.0}
+- `uni6018` 怘 — {"bbox": 13.0}
+- `uni6020` 怠 — {"bbox": 13.0}
+- `uni6025` 急 — {"bbox": 13.0}
+- `uni6028` 怨 — {"bbox": 13.0}
+- `uni602F` 怯 — {"bbox": 14.0}
+- `uni6031` 怱 — {"bbox": 13.0}
+- `uni604B` 恋 — {"bbox": 13.0}
+- `uni6050` 恐 — {"bbox": 13.0}
+- `uni6055` 恕 — {"bbox": 13.0}
+- `uni6059` 恙 — {"bbox": 13.0}
+- `uni605A` 恚 — {"bbox": 15.0}
+- `uni6069` 恩 — {"bbox": 13.0}
+- `uni606F` 息 — {"bbox": 13.0}
+- `uni6075` 恵 — {"bbox": 13.0}
+- `uni6089` 悉 — {"bbox": 13.0}
+- `uni60A3` 患 — {"bbox": 13.0}
+- `uni60AA` 悪 — {"bbox": 13.0}

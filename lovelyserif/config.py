@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from .filters import SoftenParams
 
-VERSION = "0.1.0"
-VERSION_FIXED = 0.100          # head.fontRevision / name ID 5
+VERSION = "0.1.1"
+VERSION_FIXED = 0.101          # head.fontRevision / name ID 5
 FAMILY = "Lovely Serif"
 FAMILY_JA = "ラブリーセリフ"
 STYLE = "Regular"
@@ -53,7 +53,16 @@ KANJI_PARAMS = SoftenParams(r_convex=30.0, r_concave=10.0, d_tip=18.0, tip_angle
 KANA_PARAMS = SoftenParams(r_convex=28.0, r_concave=9.0, d_tip=18.0, tip_angle_deg=112.0,
                            handle_factor=1.0, max_frac=0.46)
 LATIN_PARAMS = SoftenParams(r_convex=14.0, r_concave=7.0, d_tip=9.0, tip_angle_deg=112.0,
-                            handle_factor=1.0, max_frac=0.44)
+                            handle_factor=1.0, max_frac=0.30)  # 0.30 keeps a flat cut on thin ends (no rounded-gothic look)
 LATIN_OFFSET = 3.0   # units added to each side of every Latin stroke (stem 60 → 66, hairline 27 → 33)
 PUNCT_PARAMS = SoftenParams(r_convex=22.0, r_concave=8.0, d_tip=14.0)
 KANA_SMOOTH_ANGLE = 22.0
+
+# Characters deliberately left out of Lovely Serif (owner's decision, 2026-11-02):
+# the "we" kana in every form. Text containing them falls back to the next font in the CSS stack.
+EXCLUDE_CODEPOINTS = {
+    0x3091,  # ゑ HIRAGANA LETTER WE
+    0x30F1,  # ヱ KATAKANA LETTER WE
+    0x30F9,  # ヹ KATAKANA LETTER VE
+    0x32FD,  # ㋽ CIRCLED KATAKANA WE
+}

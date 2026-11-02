@@ -99,7 +99,7 @@ exclamdown,U+00A1,¡,latin,nanum,yes,no,soften_corners(2); offset(+3),29,31
 cent,U+00A2,¢,latin,nanum,yes,no,soften_corners(14); offset(+3),39,53
 sterling,U+00A3,£,latin,nanum,yes,no,soften_corners(17); offset(+3),60,77
 currency,U+00A4,¤,latin,nanum,yes,no,soften_corners(16); offset(+3),44,60
-yen,U+00A5,¥,latin,nanum,yes,no,soften_corners(30); offset(+3),61,90
+yen,U+00A5,¥,latin,nanum,yes,no,soften_corners(30); offset(+3),61,89
 brokenbar,U+00A6,¦,latin,nanum,yes,no,soften_corners(8); offset(+3),8,16
 section,U+00A7,§,latin-noto,noto,yes,no,soften_corners(8),28,36
 dieresis,U+00A8,¨,latin-noto,noto,no,no,,8,8
@@ -125,100 +125,100 @@ onequarter,U+00BC,¼,latin,nanum,yes,no,soften_corners(25); offset(+3),37,60
 onehalf,U+00BD,½,latin,nanum,yes,no,soften_corners(19); offset(+3),40,58
 threequarters,U+00BE,¾,latin,nanum,yes,no,soften_corners(23); offset(+3),52,72
 questiondown,U+00BF,¿,latin,nanum,yes,no,soften_corners(2); offset(+3),44,46
-Agrave,U+00C0,À,latin-noto,noto,yes,no,soften_corners(21),25,46
-Aacute,U+00C1,Á,latin-noto,noto,yes,no,soften_corners(21),25,46
-Acircumflex,U+00C2,Â,latin-noto,noto,yes,no,soften_corners(26),26,52
-Atilde,U+00C3,Ã,latin-noto,noto,yes,no,soften_corners(23),29,52
-Adieresis,U+00C4,Ä,latin-noto,noto,yes,no,soften_corners(19),27,46
-Aring,U+00C5,Å,latin-noto,noto,yes,no,soften_corners(19),27,46
+Agrave,U+00C0,À,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),39,55
+Aacute,U+00C1,Á,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),39,55
+Acircumflex,U+00C2,Â,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(22); offset(+3),40,61
+Atilde,U+00C3,Ã,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),43,61
+Adieresis,U+00C4,Ä,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(15); offset(+3),41,55
+Aring,U+00C5,Å,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(15); offset(+3),41,55
 AE,U+00C6,Æ,latin,nanum,yes,no,soften_corners(26); offset(+3),68,93
-Ccedilla,U+00C7,Ç,latin-noto,noto,yes,no,soften_corners(14),23,37
-Egrave,U+00C8,È,latin-noto,noto,yes,no,soften_corners(26),32,58
-Eacute,U+00C9,É,latin-noto,noto,yes,no,soften_corners(26),32,58
-Ecircumflex,U+00CA,Ê,latin-noto,noto,yes,no,soften_corners(31),33,64
-Edieresis,U+00CB,Ë,latin-noto,noto,yes,no,soften_corners(24),34,58
-Igrave,U+00CC,Ì,latin-noto,noto,yes,no,soften_corners(14),22,36
-Iacute,U+00CD,Í,latin-noto,noto,yes,no,soften_corners(14),22,36
-Icircumflex,U+00CE,Î,latin-noto,noto,yes,no,soften_corners(19),23,42
-Idieresis,U+00CF,Ï,latin-noto,noto,yes,no,soften_corners(12),24,36
+Ccedilla,U+00C7,Ç,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(13); offset(+3),44,53
+Egrave,U+00C8,È,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),53,72
+Eacute,U+00C9,É,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),53,72
+Ecircumflex,U+00CA,Ê,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(24); offset(+3),54,78
+Edieresis,U+00CB,Ë,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),55,72
+Igrave,U+00CC,Ì,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),32,42
+Iacute,U+00CD,Í,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),32,42
+Icircumflex,U+00CE,Î,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(15); offset(+3),33,48
+Idieresis,U+00CF,Ï,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),34,42
 Eth,U+00D0,Ð,latin,nanum,yes,no,soften_corners(13); offset(+3),51,64
-Ntilde,U+00D1,Ñ,latin-noto,noto,yes,no,soften_corners(24),32,56
-Ograve,U+00D2,Ò,latin-noto,noto,yes,no,soften_corners(2),14,16
-Oacute,U+00D3,Ó,latin-noto,noto,yes,no,soften_corners(2),14,16
-Ocircumflex,U+00D4,Ô,latin-noto,noto,yes,no,soften_corners(7),15,22
-Otilde,U+00D5,Õ,latin-noto,noto,yes,no,soften_corners(4),18,22
-Odieresis,U+00D6,Ö,latin-noto,noto,no,no,,16,16
+Ntilde,U+00D1,Ñ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),52,69
+Ograve,U+00D2,Ò,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(2); offset(+3),38,40
+Oacute,U+00D3,Ó,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(2); offset(+3),38,40
+Ocircumflex,U+00D4,Ô,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(7); offset(+3),39,46
+Otilde,U+00D5,Õ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),42,46
+Odieresis,U+00D6,Ö,latin,nanum,yes,no,composed: nanum base + accent; offset(+3),40,40
 multiply,U+00D7,×,latin-noto,noto,yes,no,soften_corners(12),12,24
 Oslash,U+00D8,Ø,latin,nanum,yes,no,soften_corners(12); offset(+3),43,55
-Ugrave,U+00D9,Ù,latin-noto,noto,yes,no,soften_corners(14),26,40
-Uacute,U+00DA,Ú,latin-noto,noto,yes,no,soften_corners(14),26,40
-Ucircumflex,U+00DB,Û,latin-noto,noto,yes,no,soften_corners(19),27,46
-Udieresis,U+00DC,Ü,latin-noto,noto,yes,no,soften_corners(12),28,40
-Yacute,U+00DD,Ý,latin-noto,noto,yes,no,soften_corners(23),27,50
+Ugrave,U+00D9,Ù,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),50,60
+Uacute,U+00DA,Ú,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),50,60
+Ucircumflex,U+00DB,Û,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(15); offset(+3),51,66
+Udieresis,U+00DC,Ü,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),52,60
+Yacute,U+00DD,Ý,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),44,61
 Thorn,U+00DE,Þ,latin,nanum,yes,no,soften_corners(12); offset(+3),56,68
 germandbls,U+00DF,ß,latin,nanum,yes,no,soften_corners(7); offset(+3),58,65
-agrave,U+00E0,à,latin-noto,noto,yes,no,soften_corners(10),29,39
-aacute,U+00E1,á,latin-noto,noto,yes,no,soften_corners(10),29,39
-acircumflex,U+00E2,â,latin-noto,noto,yes,no,soften_corners(15),30,45
-atilde,U+00E3,ã,latin-noto,noto,yes,no,soften_corners(12),33,45
-adieresis,U+00E4,ä,latin-noto,noto,yes,no,soften_corners(8),31,39
-aring,U+00E5,å,latin-noto,noto,yes,no,soften_corners(8),31,39
+agrave,U+00E0,à,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),44,51
+aacute,U+00E1,á,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),44,51
+acircumflex,U+00E2,â,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(13); offset(+3),45,57
+atilde,U+00E3,ã,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),48,57
+adieresis,U+00E4,ä,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(6); offset(+3),46,51
+aring,U+00E5,å,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(6); offset(+3),46,51
 ae,U+00E6,æ,latin,nanum,yes,no,soften_corners(9); offset(+3),69,77
-ccedilla,U+00E7,ç,latin-noto,noto,yes,no,soften_corners(10),21,31
-egrave,U+00E8,è,latin-noto,noto,yes,no,soften_corners(7),19,26
-eacute,U+00E9,é,latin-noto,noto,yes,no,soften_corners(7),19,26
-ecircumflex,U+00EA,ê,latin-noto,noto,yes,no,soften_corners(12),20,32
-edieresis,U+00EB,ë,latin-noto,noto,yes,no,soften_corners(5),21,26
-igrave,U+00EC,ì,latin-noto,noto,yes,no,soften_corners(13),22,35
-iacute,U+00ED,í,latin-noto,noto,yes,no,soften_corners(13),22,35
-icircumflex,U+00EE,î,latin-noto,noto,yes,no,soften_corners(18),23,41
-idieresis,U+00EF,ï,latin-noto,noto,yes,no,soften_corners(11),24,35
+ccedilla,U+00E7,ç,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),50,53
+egrave,U+00E8,è,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(6); offset(+3),39,45
+eacute,U+00E9,é,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(6); offset(+3),39,45
+ecircumflex,U+00EA,ê,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(11); offset(+3),40,51
+edieresis,U+00EB,ë,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),41,45
+igrave,U+00EC,ì,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),32,42
+iacute,U+00ED,í,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),32,42
+icircumflex,U+00EE,î,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(15); offset(+3),33,48
+idieresis,U+00EF,ï,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),34,42
 eth,U+00F0,ð,latin,nanum,yes,no,soften_corners(11); offset(+3),29,39
-ntilde,U+00F1,ñ,latin-noto,noto,yes,no,soften_corners(23),39,62
-ograve,U+00F2,ò,latin-noto,noto,yes,no,soften_corners(2),14,16
-oacute,U+00F3,ó,latin-noto,noto,yes,no,soften_corners(2),14,16
-ocircumflex,U+00F4,ô,latin-noto,noto,yes,no,soften_corners(7),15,22
-otilde,U+00F5,õ,latin-noto,noto,yes,no,soften_corners(4),18,22
-odieresis,U+00F6,ö,latin-noto,noto,no,no,,16,16
+ntilde,U+00F1,ñ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(18); offset(+3),62,79
+ograve,U+00F2,ò,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(2); offset(+3),38,40
+oacute,U+00F3,ó,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(2); offset(+3),38,40
+ocircumflex,U+00F4,ô,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(7); offset(+3),39,46
+otilde,U+00F5,õ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),42,46
+odieresis,U+00F6,ö,latin,nanum,yes,no,composed: nanum base + accent; offset(+3),40,40
 divide,U+00F7,÷,latin-noto,noto,yes,no,soften_corners(4),12,16
-oslash,U+00F8,ø,latin,nanum,yes,no,soften_corners(12); offset(+3),40,52
-ugrave,U+00F9,ù,latin-noto,noto,yes,no,soften_corners(18),28,46
-uacute,U+00FA,ú,latin-noto,noto,yes,no,soften_corners(18),28,46
-ucircumflex,U+00FB,û,latin-noto,noto,yes,no,soften_corners(23),29,52
-udieresis,U+00FC,ü,latin-noto,noto,yes,no,soften_corners(16),30,46
-yacute,U+00FD,ý,latin-noto,noto,yes,no,soften_corners(18),28,46
+oslash,U+00F8,ø,latin,nanum,yes,no,soften_corners(12); offset(+3),40,51
+ugrave,U+00F9,ù,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),48,59
+uacute,U+00FA,ú,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),48,59
+ucircumflex,U+00FB,û,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),49,65
+udieresis,U+00FC,ü,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),50,59
+yacute,U+00FD,ý,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),46,57
 thorn,U+00FE,þ,latin,nanum,yes,no,soften_corners(12); offset(+3),55,64
-ydieresis,U+00FF,ÿ,latin-noto,noto,yes,no,soften_corners(16),30,46
-Amacron,U+0100,Ā,latin-noto,noto,yes,no,soften_corners(23),23,46
-amacron,U+0101,ā,latin-noto,noto,yes,no,soften_corners(12),27,39
-Abreve,U+0102,Ă,latin-noto,noto,yes,no,soften_corners(23),25,48
-abreve,U+0103,ă,latin-noto,noto,yes,no,soften_corners(12),29,41
+ydieresis,U+00FF,ÿ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),48,57
+Amacron,U+0100,Ā,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),37,55
+amacron,U+0101,ā,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),42,51
+Abreve,U+0102,Ă,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(19); offset(+3),39,57
+abreve,U+0103,ă,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(10); offset(+3),44,53
 Dcroat,U+0110,Đ,latin-noto,noto,yes,no,soften_corners(16),22,38
 dcroat,U+0111,đ,latin,nanum,yes,no,soften_corners(16); offset(+3),61,76
-Emacron,U+0112,Ē,latin-noto,noto,yes,no,soften_corners(28),30,58
-emacron,U+0113,ē,latin-noto,noto,yes,no,soften_corners(9),17,26
-Ecaron,U+011A,Ě,latin-noto,noto,yes,no,soften_corners(31),33,64
-ecaron,U+011B,ě,latin-noto,noto,yes,no,soften_corners(12),20,32
-Itilde,U+0128,Ĩ,latin-noto,noto,yes,no,soften_corners(16),26,42
-itilde,U+0129,ĩ,latin-noto,noto,yes,no,soften_corners(15),26,41
-Imacron,U+012A,Ī,latin-noto,noto,yes,no,soften_corners(16),20,36
-imacron,U+012B,ī,latin-noto,noto,yes,no,soften_corners(15),20,35
-Nacute,U+0143,Ń,latin-noto,noto,yes,no,soften_corners(22),28,50
-nacute,U+0144,ń,latin-noto,noto,yes,no,soften_corners(21),35,56
-Ncaron,U+0147,Ň,latin-noto,noto,yes,no,soften_corners(27),29,56
-ncaron,U+0148,ň,latin-noto,noto,yes,no,soften_corners(26),36,62
-Omacron,U+014C,Ō,latin-noto,noto,yes,no,soften_corners(4),12,16
-omacron,U+014D,ō,latin-noto,noto,yes,no,soften_corners(4),12,16
-Obreve,U+014E,Ŏ,latin-noto,noto,yes,no,soften_corners(4),14,18
-obreve,U+014F,ŏ,latin-noto,noto,yes,no,soften_corners(4),14,18
+Emacron,U+0112,Ē,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(21); offset(+3),51,72
+emacron,U+0113,ē,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(8); offset(+3),37,45
+Ecaron,U+011A,Ě,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(24); offset(+3),54,78
+ecaron,U+011B,ě,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(11); offset(+3),40,51
+Itilde,U+0128,Ĩ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),36,48
+itilde,U+0129,ĩ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),36,48
+Imacron,U+012A,Ī,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),30,42
+imacron,U+012B,ī,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),30,42
+Nacute,U+0143,Ń,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(17); offset(+3),48,63
+nacute,U+0144,ń,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(16); offset(+3),58,73
+Ncaron,U+0147,Ň,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(22); offset(+3),49,69
+ncaron,U+0148,ň,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(21); offset(+3),59,79
+Omacron,U+014C,Ō,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),36,40
+omacron,U+014D,ō,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),36,40
+Obreve,U+014E,Ŏ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),38,42
+obreve,U+014F,ŏ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(4); offset(+3),38,42
 OE,U+0152,Œ,latin,nanum,yes,no,soften_corners(13); offset(+3),70,83
 oe,U+0153,œ,latin,nanum,yes,no,soften_corners(6); offset(+3),58,62
-Utilde,U+0168,Ũ,latin-noto,noto,yes,no,soften_corners(16),30,46
-utilde,U+0169,ũ,latin-noto,noto,yes,no,soften_corners(20),32,52
-Umacron,U+016A,Ū,latin-noto,noto,yes,no,soften_corners(16),24,40
-umacron,U+016B,ū,latin-noto,noto,yes,no,soften_corners(20),26,46
-Ubreve,U+016C,Ŭ,latin-noto,noto,yes,no,soften_corners(16),26,42
-ubreve,U+016D,ŭ,latin-noto,noto,yes,no,soften_corners(20),28,48
+Utilde,U+0168,Ũ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),54,66
+utilde,U+0169,ũ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(14); offset(+3),52,65
+Umacron,U+016A,Ū,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),48,60
+umacron,U+016B,ū,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(14); offset(+3),46,59
+Ubreve,U+016C,Ŭ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(12); offset(+3),50,62
+ubreve,U+016D,ŭ,latin,nanum,yes,no,composed: nanum base + accent; soften_corners(14); offset(+3),48,61
 uni0251,U+0251,ɑ,symbol,noto,no,no,,18,18
 uni0261,U+0261,ɡ,symbol,noto,no,no,,23,23
 caron,U+02C7,ˇ,latin-noto,noto,yes,no,soften_corners(6),6,12
@@ -254,7 +254,7 @@ guilsinglleft,U+2039,‹,latin,nanum,yes,no,soften_corners(6); offset(+3),6,12
 guilsinglright,U+203A,›,latin,nanum,yes,no,soften_corners(6); offset(+3),6,12
 uni203B,U+203B,※,latin-noto,noto,yes,no,soften_corners(12),28,40
 exclamdbl,U+203C,‼,latin,nanum,yes,no,offset(+3),58,58
-uni2042,U+2042,⁂,latin,nanum,yes,no,soften_corners(7); offset(+3),283,250
+uni2042,U+2042,⁂,latin,nanum,yes,no,soften_corners(3); offset(+3),283,250
 uni2047,U+2047,⁇,latin-noto,noto,yes,no,soften_corners(8),38,46
 uni2048,U+2048,⁈,latin-noto,noto,yes,no,soften_corners(6),30,36
 uni2049,U+2049,⁉,latin-noto,noto,yes,no,soften_corners(6),30,36
@@ -1033,7 +1033,6 @@ uni308D,U+308D,ろ,kana,noto,yes,no,smooth_joins(8); soften_corners(4),24,28
 uni308E,U+308E,ゎ,kana,noto,yes,no,smooth_joins(11); soften_corners(16),43,58
 uni308F,U+308F,わ,kana,noto,yes,no,smooth_joins(10); soften_corners(16),42,58
 uni3090,U+3090,ゐ,kana,noto,yes,no,smooth_joins(10); soften_corners(8),36,44
-uni3091,U+3091,ゑ,kana,noto,yes,no,smooth_joins(20); soften_corners(10),56,66
 uni3092,U+3092,を,kana,noto,yes,no,smooth_joins(15); soften_corners(14),48,62
 uni3093,U+3093,ん,kana,noto,yes,no,smooth_joins(10); soften_corners(4),24,28
 uni3094,U+3094,ゔ,kana,noto,yes,no,smooth_joins(9); soften_corners(13),34,47
@@ -1127,7 +1126,6 @@ uni30ED,U+30ED,ロ,kana,noto,yes,no,smooth_joins(5); soften_corners(8),24,32
 uni30EE,U+30EE,ヮ,kana,noto,yes,no,smooth_joins(8); soften_corners(6),20,26
 uni30EF,U+30EF,ワ,kana,noto,yes,no,smooth_joins(6); soften_corners(6),20,26
 uni30F0,U+30F0,ヰ,kana,noto,yes,no,smooth_joins(13); soften_corners(18),44,62
-uni30F1,U+30F1,ヱ,kana,noto,yes,no,smooth_joins(13); soften_corners(10),33,42
 uni30F2,U+30F2,ヲ,kana,noto,yes,no,smooth_joins(6); soften_corners(8),24,32
 uni30F3,U+30F3,ン,kana,noto,yes,no,smooth_joins(3); soften_corners(6),13,19
 uni30F4,U+30F4,ヴ,kana,noto,yes,no,smooth_joins(15); soften_corners(14),40,54
@@ -1135,7 +1133,6 @@ uni30F5,U+30F5,ヵ,kana,noto,yes,no,smooth_joins(10); soften_corners(12),32,44
 uni30F6,U+30F6,ヶ,kana,noto,yes,no,smooth_joins(4); soften_corners(10),25,35
 uni30F7,U+30F7,ヷ,kana,noto,yes,no,smooth_joins(11); soften_corners(10),32,42
 uni30F8,U+30F8,ヸ,kana,noto,yes,no,smooth_joins(17); soften_corners(22),56,78
-uni30F9,U+30F9,ヹ,kana,noto,yes,no,smooth_joins(14); soften_corners(14),44,58
 uni30FA,U+30FA,ヺ,kana,noto,yes,no,smooth_joins(10); soften_corners(12),36,48
 uni30FB,U+30FB,・,kana,noto,no,no,,4,4
 uni30FC,U+30FC,ー,kana,noto,yes,no,smooth_joins(3); soften_corners(2),11,13
@@ -1477,7 +1474,6 @@ uni32F9,U+32F9,㋹,symbol,noto,no,no,,22,22
 uni32FA,U+32FA,㋺,symbol,noto,no,no,,32,32
 uni32FB,U+32FB,㋻,symbol,noto,no,no,,28,28
 uni32FC,U+32FC,㋼,symbol,noto,no,no,,52,52
-uni32FD,U+32FD,㋽,symbol,noto,no,no,,40,40
 uni32FE,U+32FE,㋾,symbol,noto,no,no,,32,32
 uni32FF,U+32FF,㋿,symbol,noto,no,no,,79,79
 uni3300,U+3300,㌀,symbol,noto,no,no,,78,78
@@ -2590,7 +2586,7 @@ uni555C,U+555C,啜,kanji,noto,yes,no,soften_corners(79),84,163
 uni555D,U+555D,啝,kanji,noto,yes,no,soften_corners(53),65,118
 uni555E,U+555E,啞,kanji,noto,yes,no,soften_corners(60),77,137
 uni5563,U+5563,啣,kanji,noto,yes,no,soften_corners(65),80,145
-uni557B,U+557B,啻,kanji,noto,yes,no,soften_corners(66),80,146
+uni557B,U+557B,啻,kanji,noto,yes,no,soften_corners(64); fallback(radius x0.6),80,143
 uni557C,U+557C,啼,kanji,noto,yes,no,soften_corners(65),82,147
 uni557E,U+557E,啾,kanji,noto,yes,no,soften_corners(53),66,119
 uni5580,U+5580,喀,kanji,noto,yes,no,soften_corners(69),80,149
@@ -3809,7 +3805,7 @@ uni61FC,U+61FC,懼,kanji,noto,yes,no,soften_corners(98),119,216
 uni61FD,U+61FD,懽,kanji,noto,yes,no,soften_corners(103),127,230
 uni61FE,U+61FE,懾,kanji,noto,yes,no,soften_corners(91),106,196
 uni61FF,U+61FF,懿,kanji,noto,yes,no,soften_corners(110),134,243
-uni6200,U+6200,戀,kanji,noto,yes,no,soften_corners(113),137,250
+uni6200,U+6200,戀,kanji,noto,yes,no,soften_corners(113),137,248
 uni6208,U+2F3D U+6208,⼽戈,kanji,noto,yes,no,soften_corners(27),32,59
 uni6209,U+6209,戉,kanji,noto,yes,no,soften_corners(35),40,75
 uni620A,U+620A,戊,kanji,noto,yes,no,soften_corners(30),37,67
@@ -4068,7 +4064,7 @@ uni64AE,U+64AE,撮,kanji,noto,yes,no,soften_corners(85),98,183
 uni64B0,U+64B0,撰,kanji,noto,yes,no,soften_corners(93),124,215
 uni64B2,U+64B2,撲,kanji,noto,yes,no,soften_corners(89),99,187
 uni64B9,U+64B9,撹,kanji,noto,yes,no,soften_corners(78),98,175
-uni64BB,U+64BB,撻,kanji,noto,yes,no,soften_corners(100),114,214
+uni64BB,U+64BB,撻,kanji,noto,yes,no,soften_corners(99); fallback(radius x0.35),114,212
 uni64BC,U+64BC,撼,kanji,noto,yes,no,soften_corners(88),118,206
 uni64BE,U+64BE,撾,kanji,noto,yes,no,soften_corners(90),110,200
 uni64BF,U+64BF,撿,kanji,noto,yes,no,soften_corners(82),98,180
@@ -5260,7 +5256,7 @@ uni701B,U+701B,瀛,kanji,noto,yes,no,soften_corners(103),147,250
 uni701D,U+701D,瀝,kanji,noto,yes,no,soften_corners(84),102,186
 uni701E,U+701E,瀞,kanji,noto,yes,no,soften_corners(104),130,234
 uni701F,U+701F,瀟,kanji,noto,yes,no,soften_corners(115),145,260
-uni7026,U+7026,瀦,kanji,noto,yes,no,soften_corners(96),114,210
+uni7026,U+7026,瀦,kanji,noto,yes,no,soften_corners(95); fallback(radius x0.6),114,209
 uni7027,U+7027,瀧,kanji,noto,yes,no,soften_corners(95),129,223
 uni7028,U+7028,瀨,kanji,noto,yes,no,soften_corners(95),121,215
 uni702C,U+702C,瀬,kanji,noto,yes,no,soften_corners(90),113,201
@@ -7009,7 +7005,7 @@ uni8306,U+8306,茆,kanji,noto,yes,no,soften_corners(51),65,116
 uni8309,U+8309,茉,kanji,noto,yes,no,soften_corners(50),60,110
 uni830E,U+830E,茎,kanji,noto,yes,no,soften_corners(58),65,123
 uni8316,U+8316,茖,kanji,noto,yes,no,soften_corners(60),69,129
-uni8317,U+8317,茗,kanji,noto,yes,no,soften_corners(55),65,120
+uni8317,U+8317,茗,kanji,noto,yes,no,soften_corners(55); fallback(radius x0.6),65,120
 uni8318,U+8318,茘,kanji,noto,yes,no,soften_corners(63),80,143
 uni831C,U+831C,茜,kanji,noto,yes,no,soften_corners(57),78,133
 uni8322,U+8322,茢,kanji,noto,yes,no,soften_corners(52),64,116
@@ -9921,7 +9917,7 @@ space.hwid,,,latin-noto,noto,no,no,,0,0
 exclam.hwid,,,latin-noto,noto,yes,no,soften_corners(2),11,13
 quotedbl.hwid,,,latin-noto,noto,yes,no,soften_corners(4),14,18
 numbersign.hwid,,,latin-noto,noto,yes,no,soften_corners(32),32,64
-dollar.hwid,,,latin-noto,noto,yes,no,soften_corners(20),31,51
+dollar.hwid,,,latin-noto,noto,yes,no,soften_corners(20),31,49
 percent.hwid,,,latin-noto,noto,yes,no,soften_corners(8),24,32
 ampersand.hwid,,,latin-noto,noto,yes,no,soften_corners(17),33,50
 quotesingle.hwid,,,latin-noto,noto,yes,no,soften_corners(2),7,9
@@ -10117,7 +10113,6 @@ uni308D.vert,,,kana,noto,yes,no,smooth_joins(9); soften_corners(4),24,28
 uni308E.vert,,,kana,noto,yes,no,smooth_joins(13); soften_corners(15),43,57
 uni308F.vert,,,kana,noto,yes,no,smooth_joins(11); soften_corners(16),42,58
 uni3090.vert,,,kana,noto,yes,no,smooth_joins(8); soften_corners(8),36,44
-uni3091.vert,,,kana,noto,yes,no,smooth_joins(21); soften_corners(10),56,66
 uni3092.vert,,,kana,noto,yes,no,smooth_joins(15); soften_corners(14),48,62
 uni3093.vert,,,kana,noto,yes,no,smooth_joins(9); soften_corners(4),24,28
 uni3094.vert,,,kana,noto,yes,no,smooth_joins(10); soften_corners(13),34,47
@@ -10209,7 +10204,6 @@ uni30ED.vert,,,kana,noto,yes,no,smooth_joins(6); soften_corners(8),24,32
 uni30EE.vert,,,kana,noto,yes,no,smooth_joins(6); soften_corners(6),20,26
 uni30EF.vert,,,kana,noto,yes,no,smooth_joins(6); soften_corners(6),20,26
 uni30F0.vert,,,kana,noto,yes,no,smooth_joins(12); soften_corners(18),44,62
-uni30F1.vert,,,kana,noto,yes,no,smooth_joins(10); soften_corners(10),32,42
 uni30F2.vert,,,kana,noto,yes,no,smooth_joins(6); soften_corners(8),24,32
 uni30F3.vert,,,kana,noto,yes,no,smooth_joins(3); soften_corners(6),13,19
 uni30F4.vert,,,kana,noto,yes,no,smooth_joins(15); soften_corners(14),40,54
@@ -10217,7 +10211,6 @@ uni30F5.vert,,,kana,noto,yes,no,smooth_joins(8); soften_corners(12),32,44
 uni30F6.vert,,,kana,noto,yes,no,smooth_joins(6); soften_corners(10),25,35
 uni30F7.vert,,,kana,noto,yes,no,smooth_joins(10); soften_corners(10),32,42
 uni30F8.vert,,,kana,noto,yes,no,smooth_joins(16); soften_corners(22),56,78
-uni30F9.vert,,,kana,noto,yes,no,smooth_joins(15); soften_corners(14),44,58
 uni30FA.vert,,,kana,noto,yes,no,smooth_joins(11); soften_corners(12),36,48
 uni30FC.vert,,,kana,noto,yes,no,smooth_joins(3); soften_corners(2),12,14
 uni30FD.vert,,,kana,noto,yes,no,smooth_joins(2); soften_corners(2),6,8
@@ -10363,3 +10356,20 @@ uni30C4_uni309A.vert,,,other,noto,no,no,,28,28
 uni30C8_uni309A.vert,,,other,noto,no,no,,26,26
 uni30F3_uni3099.vert,,,other,noto,no,no,,25,25
 uni31F7_uni309A.vert,,,other,noto,no,no,,22,22
+Hbar,U+0126,Ħ,latin,nanum,yes,no,soften_corners(32); offset(+3),76,108
+hbar,U+0127,ħ,latin,nanum,yes,no,soften_corners(22); offset(+3),77,98
+IJ,U+0132,Ĳ,latin,nanum,yes,no,soften_corners(12); offset(+3),54,66
+ij,U+0133,ĳ,latin,nanum,yes,no,soften_corners(14); offset(+3),61,75
+kgreenlandic,U+0138,ĸ,latin,nanum,yes,no,soften_corners(18); offset(+3),55,73
+Ldot,U+013F,Ŀ,latin,nanum,yes,no,soften_corners(9); offset(+3),43,52
+ldot,U+0140,ŀ,latin,nanum,yes,no,soften_corners(8); offset(+3),32,40
+Lslash,U+0141,Ł,latin,nanum,yes,no,soften_corners(17); offset(+3),43,60
+lslash,U+0142,ł,latin,nanum,yes,no,soften_corners(16); offset(+3),32,48
+Eng,U+014A,Ŋ,latin,nanum,yes,no,soften_corners(16); offset(+3),50,64
+eng,U+014B,ŋ,latin,nanum,yes,no,soften_corners(12); offset(+3),50,61
+Tbar,U+0166,Ŧ,latin,nanum,yes,no,soften_corners(20); offset(+3),42,62
+tbar,U+0167,ŧ,latin,nanum,yes,no,soften_corners(19); offset(+3),30,49
+quotereversed,U+201B,‛,latin,nanum,yes,no,soften_corners(2); offset(+3),16,18
+uni201F,U+201F,‟,latin,nanum,yes,no,soften_corners(4); offset(+3),32,36
+uni2034,U+2034,‴,latin,nanum,yes,no,offset(+3),30,30
+uni2036,U+2036,‶,latin,nanum,yes,no,offset(+3),18,18

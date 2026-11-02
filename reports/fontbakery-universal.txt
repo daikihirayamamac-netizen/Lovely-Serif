@@ -189,9 +189,9 @@ Start ... running 126 individual check executions.
     WARN The most common width is 1000 among a set of 43 math glyphs. The       
          following math glyphs have a different width, though:                  
                                                                                 
-         Width = 639: equal, plus, logicalnot                                   
+         Width = 645: logicalnot, plus, equal                                   
                                                                                 
-         Width = 548: greater, less                                             
+         Width = 554: less, greater                                             
                                                                                 
          Width = 580: minus [code: width-outliers]                              
 
@@ -276,7 +276,7 @@ https://github.com/google/fonts/issues/7594#issuecomment-2401909084
                                                                                 
     More info: https://github.com/fonttools/fontbakery/issues/3170
 
-    WARN OS/2.sTypoAscender value should be greater than 945, but got 880       
+    WARN OS/2.sTypoAscender value should be greater than 981, but got 880       
          instead [code: typoAscender]                                           
 
     Result: WARN

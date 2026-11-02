@@ -95,7 +95,18 @@ try:
     result("fwid: ASCII → fullwidth forms", all(g.startswith("uniFF") for g, _ in fw), " ".join(g for g, _ in fw))
     notdef = shape("ก")  # Thai: not covered → .notdef
     result(".notdef for uncovered characters", notdef[0][0] == ".notdef")
-    missing = [ch for ch in "文字から美しさを永あのりは𠮟剝頰塡ABCabc012！？、。「」" if ord(ch) not in cmap]
+    from lovelyserif.config import EXCLUDE_CODEPOINTS
+    present_ex = [chr(c) for c in EXCLUDE_CODEPOINTS if c in cmap]
+    result("excluded kana (ゑ ヱ ヹ ㋽) are absent from cmap", not present_ex, "".join(present_ex) or "absent")
+    joyo = open(os.path.join(ROOT, "data", "joyo.txt"), encoding="utf-8").read().strip()
+    result("all 2,136 Jōyō kanji present (full font)", len(joyo) == 2136 and all(ord(c) in cmap for c in joyo),
+           "".join(c for c in joyo if ord(c) not in cmap) or "2136/2136")
+    stdp = os.path.join(FONTS, "LovelySerif-Regular-std.woff2")
+    if os.path.exists(stdp):
+        scm = TTFont(stdp).getBestCmap()
+        result("all 2,136 Jōyō kanji present (std web subset)", all(ord(c) in scm for c in joyo),
+               "".join(c for c in joyo if ord(c) not in scm) or "2136/2136")
+    missing = [ch for ch in "文字から美しさを永あのりは𠮟剝頰塡ABCabc012！？、。「」éçüñŒœŁł" if ord(ch) not in cmap]
     result("key characters present in cmap", not missing, "".join(missing) or "all present")
 except Exception as e:
     result("HarfBuzz tests", False, repr(e))
@@ -116,6 +127,66 @@ try:
         im.save(os.path.join(ROOT, "docs", "screenshots", f"freetype_{fn.split('.')[-1]}.png"))
 except Exception as e:
     result("FreeType rendering", False, repr(e))
+
+section("Outline fidelity and spacing")
+try:
+    import numpy as np
+    from lovelyserif.outline import Glyph
+    from lovelyserif.qa import raster
+    fo = TTFont(os.path.join(FONTS, "LovelySerif-Regular.otf")); ft = TTFont(os.path.join(FONTS, "LovelySerif-Regular.ttf"))
+    go, gt = fo.getGlyphSet(), ft.getGlyphSet()
+    names = fo.getGlyphOrder(); tnames = ft.getGlyphOrder()   # same order; the TTF has no glyph names (post 3)
+    to_t = dict(zip(names, tnames))
+    sample = [n for i, n in enumerate(names) if i % 7 == 0] + [n for n in names if fo["hmtx"][n][0] != 1000][:400]
+    worst = (0.0, "")
+    for n in sample:
+        a = raster(Glyph.from_font_glyph(go, n), 96); b = raster(Glyph.from_font_glyph(gt, to_t[n]), 96)
+        tot = max(int(a.sum()), 1)
+        d = float((a ^ b).sum()) / tot if tot > 20 else 0.0
+        if d > worst[0]:
+            worst = (d, n)
+    result(f"TTF (quadratic) matches OTF (cubic) outlines on {len(sample)} sampled glyphs (cu2qu tolerance 1 unit)", worst[0] < 0.06,
+           f"worst pixel difference {worst[0]:.1%} ({worst[1]})")
+
+    # Latin spacing: pairs whose ink touches in Lovely Serif but not in Nanum Myeongjo
+    import uharfbuzz as hb
+    nanum = TTFont(os.path.join(ROOT, "sources", "upstream", "NanumMyeongjo-Regular.ttf"))
+    def profile(font, ch):
+        """Per-row (≈2 units) left/right ink extent from a non-zero raster of the glyph."""
+        gs = font.getGlyphSet(); gn = font.getBestCmap().get(ord(ch))
+        g = Glyph.from_font_glyph(gs, gn, font["hmtx"][gn][0])
+        g.transform(1000 / font["head"].unitsPerEm)
+        size = 560
+        img = raster(g, size)
+        scale = size / 1100
+        rows = {}
+        for r in range(size):
+            cols = np.nonzero(img[r])[0]
+            if len(cols):
+                rows[r] = ((cols[0]) / scale - 50, (cols[-1] + 1) / scale - 50)
+        return g.width, rows
+    def gaps(font, path, chars):
+        face = hb.Face(hb.Blob.from_file_path(path)); hf = hb.Font(face)
+        prof = {c: profile(font, c) for c in chars}
+        out = {}
+        for a in chars:
+            for b in chars:
+                buf = hb.Buffer(); buf.add_str(a + b); buf.guess_segment_properties(); hb.shape(hf, buf, {})
+                adv = buf.glyph_positions[0].x_advance * 1000 / font["head"].unitsPerEm
+                wa, ra = prof[a]; wb, rb = prof[b]
+                g = min((adv + rb[k][0]) - ra[k][1] for k in ra if k in rb) if any(k in rb for k in ra) else 999
+                out[a + b] = g
+        return out
+    chars = "abcdeghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ"
+    new = gaps(TTFont(os.path.join(FONTS, "LovelySerif-Regular.ttf")), os.path.join(FONTS, "LovelySerif-Regular.ttf"), chars)
+    old = gaps(nanum, os.path.join(ROOT, "sources", "upstream", "NanumMyeongjo-Regular.ttf"), chars)
+    collide = sorted(p for p in new if new[p] < 0 and old[p] >= 0)
+    tighter = sorted(((new[p] - old[p]), p) for p in new)[:5]
+    result(f"no new Latin collisions vs Nanum Myeongjo ({len(new)} pairs)", not collide,
+           ("new collisions: " + " ".join(collide)) if collide else f"tightest change {tighter[0][0]:+.0f} units ({tighter[0][1]})")
+except Exception as e:
+    import traceback; traceback.print_exc()
+    result("fidelity / spacing checks", False, repr(e))
 
 section("FontBakery (universal profile)")
 try:

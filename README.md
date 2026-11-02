@@ -64,13 +64,14 @@ Before/After は `reports/compare.html`（SVG、節点表示付き）とプレ�
 
 | セット | 収録 |
 |---|---|
-| ASCII / Latin-1 / Latin Extended-A（一部） | 全て |
-| ひらがな・カタカナ・半角カナ・全角英数記号 | 全て |
+| ASCII / Latin-1 | 全て（アクセント付きは Nanum の基本字から合成） |
+| Latin Extended-A | Ā ā Ē ē Ī ī Ō ō Ū ū Œ œ Ł ł ŋ ħ など一部 |
+| ひらがな・カタカナ・半角カナ・全角英数記号 | 全て（ただし ゑ・ヱ・ヹ・㋽ は意図的に除外） |
 | JIS X 0208 漢字（第1・第2水準） | 6,356 / 6,356 |
 | JIS X 0213 第1面の漢字（常用漢字 2,136 字と人名用漢字をすべて含む） | 7,615 / 7,615 |
 | 記号（①②③、㈱、℃、矢印、罫線、○●◎□■☆★ など） | Noto Serif JP の収録分 |
 
-合計 10,364 グリフ・10,100 以上の文字。詳細は `reports/coverage.md`、全グリフの状態（元フォント／適用した加工／手作業編集）は `reports/glyph_status.csv` と `reports/glyph_status.md`。
+合計 10,374 グリフ・10,130 文字。常用漢字 2,136 字の全収録は `data/joyo.txt` と照合して検証しています。詳細は `reports/coverage.md`、全グリフの状態（元フォント／適用した加工／手作業編集）は `reports/glyph_status.csv` と `reports/glyph_status.md`。
 
 ## ビルド方法（再現可能）
 
@@ -95,6 +96,11 @@ FontForge は不要です（fontTools + skia-pathops だけで動きます）。
 
 ## 品質検証
 
+* 輪郭 QA（`scripts/qa.py`）：全 10,374 グリフを元フォントと比較。自己交差・縮退セグメント・輪郭の向き・消失は 0 件。丸めで自己交差しそうな字は自動で半径を下げて再処理します。
+* 字間：Latin 2,500 ペアで元の Nanum に無い衝突は 0 件。
+* TTF と OTF の形状一致（cu2qu 誤差 1 unit 以内）。
+* 常用漢字 2,136 字：フル版・軽量版（-std）とも全収録。
+
 `reports/verification.md` を参照。
 
 * fontTools：全テーブルの読込・再コンパイル OK
@@ -107,7 +113,8 @@ FontForge は不要です（fontTools + skia-pathops だけで動きます）。
 ## 残る課題
 
 * **ウェイト**：v0.1 は Regular のみ。Light / Medium / SemiBold / Bold は、Noto Serif JP の可変軸と Nanum Myeongjo Bold を元に別途設計予定（単純な太さ変更では完成扱いにしません）。
-* アクセント付きラテン文字（À É ñ など）は Nanum Myeongjo に無いため Noto Serif JP 由来（やや太め）。
+* 中欧系のラテン（Č Š Ž Ő Ğ Ş など）は未収録。表示は CSS の次のフォントに回ります。
+* 「ゑ」「ヱ」「ヹ」「㋽」は意図的に収録していません（`lovelyserif/config.py` の `EXCLUDE_CODEPOINTS`）。
 * ヒンティング無し（macOS / iOS / Chrome / Safari は問題なし。Windows の小サイズではやや粗く見えることがあります）。
 * ラテンのカーニングは Nanum の 55 ペアのみ。
 * 手作業編集は代表文字のみ。その他はアルゴリズム（角の丸め・平滑化・太さ補正）による自動調整。一覧は `reports/glyph_status.md`。

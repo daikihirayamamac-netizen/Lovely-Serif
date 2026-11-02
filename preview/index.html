@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lovely Serif — ラブリーセリフ プレビュー</title>
 <meta name="description" content="Lovely Serif（ラブリーセリフ）— 日本語と英語のためのやわらかな明朝体。自由に文字を入力して確認できるプレビュー。">
-<link rel="preload" href="../fonts/LovelySerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 <style>
@@ -48,10 +47,11 @@ h2 + .sub{color:var(--ink2);margin:0 0 22px;font-size:15px}
 /* specimens */
 .grid2{display:grid;grid-template-columns:1fr;gap:22px}
 @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr}}
+.grid2>*,.cmpgrid>*,.ab>*,.tester>*{min-width:0}
 .spec{padding:26px 28px}
 .spec p{margin:0 0 .9em}
 .big{font-size:34px;line-height:1.45;margin:0 0 .4em}
-.vbox{writing-mode:vertical-rl;height:420px;font-size:20px;line-height:2.1;padding:22px 26px}
+.vbox{writing-mode:vertical-rl;height:420px;font-size:20px;line-height:2.1;padding:22px 26px;max-width:100%;overflow-x:auto;overflow-y:hidden}
 .vbox p{margin:0 0 0 1.2em}
 .en{letter-spacing:.005em}
 .sizes p{margin:.2em 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -66,7 +66,8 @@ h2 + .sub{color:var(--ink2);margin:0 0 22px;font-size:15px}
 figure{margin:0;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:12px}
 figure img{width:100%;height:auto;display:block;border-radius:8px;background:#fff}
 figcaption{font:12px/1.5 ui-sans-serif,system-ui,sans-serif;color:var(--ink2);margin-top:8px}
-.ab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ab{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:700px){.ab{grid-template-columns:1fr 1fr}}
 .ab > div{padding:18px 20px}
 .ab .lab{font:11px ui-sans-serif,system-ui,sans-serif;letter-spacing:.2em;color:var(--ink2);margin-bottom:8px}
 .ab .t{font-size:30px;line-height:1.5}
@@ -83,7 +84,7 @@ ul.issues{margin:0;padding-left:1.2em;font-family:ui-sans-serif,system-ui,sans-s
 </head>
 <body>
 <header class="wrap">
-  <div class="eyebrow">Typeface preview · v0.1.0 · Regular</div>
+  <div class="eyebrow">Typeface preview · v0.1.1 · Regular</div>
   <h1>Lovely Serif<small>ラブリーセリフ</small></h1>
   <p class="tag">文字から、美しさを。</p>
   <p class="lead">日常の文章を、もっと美しく、やさしく。静かで、上品で、読むほどに心地よい新しい明朝体です。</p>
@@ -137,7 +138,7 @@ Beauty in every letter.</div>
     <div class="card spec en">
       <p class="big">Beauty in every letter.</p>
       <p>A quiet, timeless serif. Designed for clarity, harmony, and a more beautiful everyday. The Latin keeps the elegant proportions of Nanum Myeongjo, with slightly rounded serifs and a delicate upward sweep at the exit of m, n, i, l and k.</p>
-      <p>Mixed text — 日本語と English を混ぜても、高さと線の強弱が揃うように調整しています。2026年11月、Lovely Serif v0.1.0。</p>
+      <p>Mixed text — 日本語と English を混ぜても、高さと線の強弱が揃うように調整しています。2026年11月、Lovely Serif v0.1.1。</p>
       <p style="font-size:14px;color:var(--ink2)">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 &amp; ? ! , . ; : ‘ ’ “ ” ( ) [ ] @ # % $ € ¥</p>
     </div>
   </div>
@@ -171,9 +172,9 @@ Beauty in every letter.</div>
 
 <section id="chars" class="wrap">
   <h2>文字一覧</h2>
-  <p class="sub">10,364 グリフ · 10,117 文字 · JIS X 0208 漢字 6,356/6,356 · JIS X 0213 第1面漢字（常用・人名用をすべて含む）7,615/7,615</p>
-  <div class="card chars">ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをんゔゕゖ</div>
-  <div class="card chars" style="margin-top:14px">ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶヷヸヹヺ</div>
+  <p class="sub">10,374 グリフ · 10,130 文字 · JIS X 0208 漢字 6,356/6,356 · JIS X 0213 第1面漢字（常用・人名用をすべて含む）7,615/7,615</p>
+  <div class="card chars">ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐをんゔゕゖ</div>
+  <div class="card chars" style="margin-top:14px">ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヲンヴヵヶヷヸヺ</div>
   <div class="card chars small" style="margin-top:14px">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 ÀÁÂÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜß àáâäåæçèéêëìíîïñòóôõöøùúûüÿ<br>！？、。・「」『』【】〈〉《》〔〕（）［］｛｝〒〓※〜…―‐ ー 々〆〇 ゛゜ ①②③④⑤⑥⑦⑧⑨⑩ ⅠⅡⅢ ㈱ ℃ ← → ↑ ↓ ○●◎□■△▲▽▼◇◆☆★ ♪ ♭ ♯ ¥ € ＡＢＣ ａｂｃ １２３ ｱｲｳｴｵ</div>
   <div class="card wall" style="margin-top:14px">一与中乎乾五亦仇仝企伯位佳侠促俵借偏傑働儒兇入典冠凋凶刈制剖劃劫動勺匝千単却厩双叢台合向吾味品唐善喬嘱嚢固地垂埴堕塁塩墳壮夙失套妃妹姥娘婿嬬季完宜害密審射尚尿属岨峯嵩工巻帥幌幻序庭廟弄弛弾彰後徳忘怜恐恰悩惜愉慕憂懇或所扱抗抽拝持挺捨排掩揖搭撒撹攻散斌斥旅早昏是景暢曲月期朽束松枠柑査校桂桟梨棒植楕楽様権機欝歌歯殴比氾江沓治波洞浅浸淀混減湖源滑演潔激瀦災烹煙熱爪牒牲狐狽獄玩球瑛瓦用界略疏痕癖皮監看睦矩砧硲碩礼神禍私称種穎突窺競符筒箪篤粁粛糟紋素紺給維総練繁纏羅習者聞肌肯胞脇腔膚臥舎舵艶芳苛茎荘菓萌葡蒔蓑蔵蕪薮蘭蚊蛭蝕衆衰裁裸西覧訊許評話誘誼諦謄譜豊財貴賄賠赦足蹄軒輩辛迂迭逐逢遅遜遷邪郷酔醐里釦鉦銭錆録鎖鐸閑阜陛陶随隼雛雷青鞍頁頓題風飾香駈騰魁鮫鰐鳩鴬鷹麺鼓</div>
   <p class="note" style="margin-top:10px">上の漢字は JIS 第1水準からの抜粋（9字おき）。全収録文字は reports/coverage.md を参照。</p>
@@ -226,12 +227,13 @@ html, body { font-family: "Lovely Serif", "Noto Serif JP", "Hiragino Mincho ProN
 </section>
 
 <section id="status" class="wrap">
-  <h2>状態・残る課題（v0.1.0）</h2>
+  <h2>状態・残る課題（v0.1.1）</h2>
   <ul class="issues">
     <li>Regular 1ウェイトのみ。Light / Medium / SemiBold / Bold は、Noto Serif JP の可変軸と Nanum Myeongjo Bold を元に設計予定。</li>
-    <li>アクセント付きラテン文字（À É ñ など）は Nanum Myeongjo に無いため Noto Serif JP 由来（やや太め）。</li>
+    <li>アクセント付きラテン（À É ñ ü ç など Latin-1 全部）は Nanum の基本字＋アクセント部品で合成済み。中欧系（Č Š Ž Ő Ł 以外の Latin Extended-A の大半）は未収録で、代替フォントで表示されます。</li>
+    <li>「ゑ」「ヱ」「ヹ」「㋽」は意図的に収録していません（代替フォントで表示）。</li>
     <li>ヒンティング無し（macOS / iOS / Chrome / Safari は問題なし。Windows の小さいサイズでは輪郭が粗く見えることがあります）。</li>
-    <li>ラテンのカーニングは Nanum Myeongjo の 55 ペアのみ。追加調整の余地あり。</li>
+    <li>ラテンのカーニングは Nanum Myeongjo の 55 ペアのみ（字間の衝突は全 2,500 ペアで検査済み・0件）。</li>
     <li>手作業で字形を編集したのは代表的な文字（永 美 文 字 あ の り は か す / m n i l k ほか）。その他の文字はアルゴリズム（角の丸め・接線の平滑化・太さ補正）による自動調整です。</li>
   </ul>
 </section>
@@ -244,7 +246,7 @@ html, body { font-family: "Lovely Serif", "Noto Serif JP", "Hiragino Mincho ProN
 const SAMPLES = {
  jp: "季節の移ろいの中で、言葉はそっと息をする。\n光と影が織りなす情景に、心は静かにほどけていく。\n美しい文字は、美しい時間をつくる。",
  en: "Beauty in every letter.\nA quiet, timeless serif, designed for clarity, harmony, and a more beautiful everyday.\nThe quick brown fox jumps over the lazy dog. 0123456789",
- mix: "2026年11月、Lovely Serif v0.1.0 を公開。\nTokyo（東京）から Kyoto（京都）へ、Shinkansen で 2 時間 15 分。\n「Typeface Concept — ことばが、日常をやさしくする。」",
+ mix: "2026年11月、Lovely Serif v0.1.1 を公開。\nTokyo（東京）から Kyoto（京都）へ、Shinkansen で 2 時間 15 分。\n「Typeface Concept — ことばが、日常をやさしくする。」",
  kana: "あいうえお かきくけこ さしすせそ たちつてと なにぬねの\nはひふへほ まみむめも やゆよ らりるれろ わをん\nアイウエオ カキクケコ サシスセソ タチツテト ナニヌネノ\nハヒフヘホ マミムメモ ヤユヨ ラリルレロ ワヲン",
  kanji: "永美文字 愛国春夏秋冬 憂鬱薔薇檸檬 𠮟剝頰塡\n一二三四五六七八九十百千万億 日月火水木金土\n東京都渋谷区神宮前 新幹線 自由 平和 希望 感謝",
  num: "0123456789 ０１２３４５６７８９\n¥1,980 $24.99 €15 12:30 2026/11/01 50% #1 @home\n！？、。・「」『』【】〈〉（）［］〒※〜…―ー ①②③ ← → ○●◎□■☆★",

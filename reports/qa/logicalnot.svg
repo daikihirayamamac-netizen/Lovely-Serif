@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="684" height="276" viewBox="0 0 684 276" style="background:#fff">
+<g transform="translate(4,215.6)"><g transform="scale(0.22,-0.22)">
+<line x1="0" y1="0" x2="1000" y2="0" stroke="#ccc" stroke-width="4.545454545454546"/>
+<path d="M561.5234375 402.34375H78.125V356.4453125H504.8828125V135.7421875H561.5234375Z" fill="#777" stroke="none"/>
+</g></g>
+<text x="6" y="16" font-family="sans-serif" font-size="13" fill="#555">before · 6 nodes</text>
+<g transform="translate(232,215.6)"><g transform="scale(0.22,-0.22)">
+<line x1="0" y1="0" x2="1000" y2="0" stroke="#ccc" stroke-width="4.545454545454546"/>
+<path d="M551.0 405.0H95.0C86.0 405.0 78.0 397.0 78.0 389.0V366.0C78.0 360.0 84.0 353.0 91.0 353.0H501.0C504.0 353.0 505.0 352.0 505.0 349.0V150.0C505.0 141.0 513.0 133.0 522.0 133.0H552.0C560.0 133.0 568.0 140.0 568.0 149.0V388.0C568.0 397.0 559.0 405.0 551.0 405.0Z" fill="#111" stroke="none"/>
+</g></g>
+<text x="234" y="16" font-family="sans-serif" font-size="13" fill="#555">after · 12 nodes</text>
+<g transform="translate(460,215.6)"><g transform="scale(0.22,-0.22)">
+<line x1="0" y1="0" x2="1000" y2="0" stroke="#ccc" stroke-width="4.545454545454546"/>
+<path d="M561.5234375 402.34375H78.125V356.4453125H504.8828125V135.7421875H561.5234375Z" fill="none" stroke="#d33" stroke-width="5.454545454545454" stroke-dasharray="18.181818181818183,13.636363636363637"/>
+<path d="M551.0 405.0H95.0C86.0 405.0 78.0 397.0 78.0 389.0V366.0C78.0 360.0 84.0 353.0 91.0 353.0H501.0C504.0 353.0 505.0 352.0 505.0 349.0V150.0C505.0 141.0 513.0 133.0 522.0 133.0H552.0C560.0 133.0 568.0 140.0 568.0 149.0V388.0C568.0 397.0 559.0 405.0 551.0 405.0Z" fill="rgba(0,0,0,0.10)" stroke="none"/>
+<circle cx="551.0" cy="405.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="95.0" cy="405.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="78.0" cy="389.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="78.0" cy="366.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="91.0" cy="353.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="501.0" cy="353.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="505.0" cy="349.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="505.0" cy="150.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="522.0" cy="133.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="552.0" cy="133.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="568.0" cy="149.0" r="9.090909090909092" fill="#e33"/>
+<circle cx="568.0" cy="388.0" r="9.090909090909092" fill="#e33"/>
+</g></g>
+<text x="462" y="16" font-family="sans-serif" font-size="13" fill="#555">logicalnot {"xor": 0.195, "area": 0.195}</text>
+</svg>
