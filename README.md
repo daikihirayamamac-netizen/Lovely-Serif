@@ -18,6 +18,8 @@ Lovely Serif は、実際にインストール・配布・Web 利用できる独
 | `sources/LovelySerif-Regular.ufo.zip` | 編集済みマスター（UFO 形式、Glyphs / RoboFont / FontForge で開けます） |
 | `reports/` | 検証結果・グリフ状態一覧・Before/After 比較 |
 
+> 開発を引き継ぐ人・エージェントは [AGENTS.md](AGENTS.md) を先に読んでください（状態・未完了事項・ハマりどころをまとめてあります）。
+
 ## プレビュー
 
 `preview/index.html` をブラウザで開くと、実際の Lovely Serif（woff2）で自由に文字を入力して確認できます
@@ -82,6 +84,7 @@ python scripts/make_webfonts.py       # Web 用サブセットと CSS
 python scripts/make_preview.py        # preview/index.html
 python scripts/verify.py              # fontTools / ots / HarfBuzz / FreeType / FontBakery → reports/verification.md
 python scripts/lab.py --set KANJI_PARAMS.r_convex=24   # 少数の文字でパラメータ試作（数秒）
+python -m unittest discover -s tests -v   # スモークテスト
 ```
 
 FontForge は不要です（fontTools + skia-pathops だけで動きます）。
